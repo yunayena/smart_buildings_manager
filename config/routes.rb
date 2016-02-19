@@ -1,0 +1,13 @@
+Rails.application.routes.draw do
+  resources :sensors do
+    resources :measures
+  end
+
+  resources :boards
+  resources :locations
+  resources :buildings
+
+  devise_for :users
+
+  root 'application#index'
+end
