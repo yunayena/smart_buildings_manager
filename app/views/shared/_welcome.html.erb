@@ -1,0 +1,13 @@
+<div class="widget stay-on-collapse" id="widget-welcomebox">
+  <div class="widget-body welcome-box tabular">
+    <div class="tabular-row">
+      <div class="tabular-cell welcome-avatar">
+        <a href="index.html#"><img src="/assets/avatar/avatar_02.png.jpeg" class="avatar"></a>
+      </div>
+      <div class="tabular-cell welcome-options">
+        <span class="welcome-text">Welcome,</span>
+        <a href="index.html#" class="name"><%= current_user.email unless current_user.blank? %></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="sidebar">
+
+  <%= render partial: 'shared/welcome' %>
+
+  <div class="widget stay-on-collapse" id="widget-sidebar">
+    <nav role="navigation" class="widget-body">
+      <ul class="acc-menu">
+        <li class="nav-separator">MANAGE</li>
+        
+        <li>
+          <%= content_tag 'a', href: root_path do %>
+            <%= content_tag 'i', '', class: "fa fa-home" %>
+            <%= content_tag 'span', "Dashboard" %>
+          <% end %>
+        </li>
+
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-columns"></i>
+            <span>Buildings</span>
+          </a>
+          <ul class="acc-menu">
+            <li>
+              <%= link_to "Create new building", new_building_path() %>
+            </li>
+            <li>
+              <%= link_to "Manage buildings", buildings_path() %>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-columns"></i>
+            <span>Locations</span>
+          </a>
+          <ul class="acc-menu">
+            <li>
+              <%= link_to "Create new location", new_location_path() %>
+            </li>
+            <li>
+              <%= link_to "Manage locations", locations_path() %>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
