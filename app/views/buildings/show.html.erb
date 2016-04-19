@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t('.notice') %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong> <%= t('.name') %>:</strong>
   <%= @building.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('.description') %>:</strong>
   <%= @building.description %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong><%= t('.address') %>:</strong>
   <%= @building.address %>
 </p>
 
 <p>
-  <strong>Postal code:</strong>
+  <strong><%= t('.postal_code') %>:</strong>
   <%= @building.postal_code %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong><%= t('.phone') %>:</strong>
   <%= @building.phone %>
 </p>
 
-<%= link_to 'Edit', edit_building_path(@building) %> |
-<%= link_to 'Back', buildings_path %>
+<%= link_to t('.edit'), edit_building_path(@building) %> |
+<%= link_to t('.back'), buildings_path %>

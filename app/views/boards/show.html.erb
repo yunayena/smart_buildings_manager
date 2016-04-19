@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t('.notice') %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('.name') %>:</strong>
   <%= @board.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('.description') %>:</strong>
   <%= @board.description %>
 </p>
 
 <p>
-  <strong>Model:</strong>
+  <strong><%= t('.model') %>:</strong>
   <%= @board.model %>
 </p>
 
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+<%= link_to t('.edit'), edit_board_path(@board) %> |
+<%= link_to t('.back'), boards_path %>

@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t('.notice') %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('.name') %>:</strong>
   <%= @sensor.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('.description'):</strong>
   <%= @sensor.description %>
 </p>
 
 <p>
-  <strong>Kind:</strong>
+  <strong><%= t('.kind') %>:</strong>
   <%= @sensor.kind %>
 </p>
 
-<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
-<%= link_to 'Back', sensors_path %>
+<%= link_to t('.edit'), edit_sensor_path(@sensor) %> |
+<%= link_to t('.back'), sensors_path %>

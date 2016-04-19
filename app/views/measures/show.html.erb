@@ -1,14 +1,14 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t('.notice') %></p>
 
 <p>
-  <strong>Value:</strong>
+  <strong><%= t('.value') %>:</strong>
   <%= @measure.value %>
 </p>
 
 <p>
-  <strong>Metric:</strong>
+  <strong><%= t('.metric') %>:</strong>
   <%= @measure.metric %>
 </p>
 
-<%= link_to 'Edit', edit_measure_path(@measure) %> |
-<%= link_to 'Back', measures_path %>
+<%= link_to t('.edit'), edit_measure_path(@measure) %> |
+<%= link_to t('.back'), measures_path %>

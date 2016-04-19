@@ -1,12 +1,12 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t ('.notice') %></p>
 
-<h1>Listing Measures</h1>
+<h1><%= t('.listing_measures') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Value</th>
-      <th>Metric</th>
+      <th><%= t('.value') %></th>
+      <th><%= t('.metric') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= measure.value %></td>
         <td><%= measure.metric %></td>
-        <td><%= link_to 'Show', measure %></td>
-        <td><%= link_to 'Edit', edit_measure_path(measure) %></td>
-        <td><%= link_to 'Destroy', measure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('.show'), measure %></td>
+        <td><%= link_to t('.edit'), edit_measure_path(measure) %></td>
+        <td><%= link_to t('.destroy'), measure, method: :delete, data: { confirm: t ('.are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Measure', new_measure_path %>
+<%= link_to t('.new_measure'), new_measure_path %>

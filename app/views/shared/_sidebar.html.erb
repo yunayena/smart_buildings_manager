@@ -5,44 +5,71 @@
   <div class="widget stay-on-collapse" id="widget-sidebar">
     <nav role="navigation" class="widget-body">
       <ul class="acc-menu">
-        <li class="nav-separator">MANAGE</li>
-        
+        <li class="nav-separator"><%= t('.MANAGE') %></li>
+
         <li>
           <%= content_tag 'a', href: root_path do %>
             <%= content_tag 'i', '', class: "fa fa-home" %>
-            <%= content_tag 'span', "Dashboard" %>
+            <%= content_tag 'span', t(".dashboard") %>
           <% end %>
         </li>
 
         <li>
           <a href="javascript:;">
             <i class="fa fa-columns"></i>
-            <span>Buildings</span>
+            <span><%= t('.buildings') %></span>
           </a>
           <ul class="acc-menu">
             <li>
-              <%= link_to "Create new building", new_building_path() %>
+              <%= link_to t('.create_new_building'), new_building_path() %>
             </li>
             <li>
-              <%= link_to "Manage buildings", buildings_path() %>
+              <%= link_to t('.manage_buildings'), buildings_path() %>
             </li>
           </ul>
         </li>
         <li>
           <a href="javascript:;">
             <i class="fa fa-columns"></i>
-            <span>Locations</span>
+            <span><%= t('.locations') %></span>
           </a>
           <ul class="acc-menu">
             <li>
-              <%= link_to "Create new location", new_location_path() %>
+              <%= link_to t('.create_new_location'), new_location_path() %>
             </li>
             <li>
-              <%= link_to "Manage locations", locations_path() %>
+              <%= link_to t('.manage_locations'), locations_path() %>
             </li>
           </ul>
         </li>
-
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-columns"></i>
+            <span><%= t('.boards') %></span>
+          </a>
+          <ul class="acc-menu">
+            <li>
+              <%= link_to t('.create_new_board'), new_board_path() %>
+            </li>
+            <li>
+              <%= link_to t('.manage_boards'), boards_path() %>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-columns"></i>
+            <span><%= t('.sensors') %></span>
+          </a>
+          <ul class="acc-menu">
+            <li>
+              <%= link_to t('.create_new_sensor'), new_sensor_path() %>
+            </li>
+            <li>
+              <%= link_to t('.manage_sensors'), sensors_path() %>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>

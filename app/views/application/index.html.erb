@@ -1,1 +1,4 @@
-<h1>Hola</h1>
+<h1><%= t('.title') %></h1>
+
+<%= link_to t('.change_locale_en'), boards_path({ locale: :en }), class: 'link-locale' %>
+<%= link_to t('.change_locale_es'), boards_path({ locale: :es }), class: 'link-locale' %>

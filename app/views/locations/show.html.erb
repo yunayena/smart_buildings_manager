@@ -1,14 +1,14 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= t('.notice') %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('.name') %>:</strong>
   <%= @location.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('.description'):</strong>
   <%= @location.description %>
 </p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to t('.edit'), edit_location_path(@location) %> |
+<%= link_to t('.back'), locations_path %>
