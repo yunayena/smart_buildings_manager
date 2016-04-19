@@ -1,0 +1,6 @@
+es:
+  buildings:
+    index:
+      message: 'Hola esta es un mensaje desde yml'
+    create:
+      notice: ''

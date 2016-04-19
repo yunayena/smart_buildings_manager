@@ -1,0 +1,35 @@
+es:
+  sensors:
+    edit:
+      editing_sensors: 'Editing sensors'
+      show: 'Show'
+      back: 'Back'
+    index:
+      listing_sensors: 'Lista de sensores'
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripción'
+      kind: 'Tipo'
+      show: 'Mostrar'
+      edit: 'Editar'
+      destroy: 'Eliminar'
+      are_you_sure: '¿Está usted seguro?'
+      new_sensor: 'Nuevo sensor'
+    new:
+      new_sensor: 'Nuevo sensor'
+      back: 'Atrás'
+    show:
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripcion'
+      kind: 'Tipo'
+      edit: 'Editar'
+      back: 'Atrás'
+  activerecord:
+    models:
+      sensor: 'Sensor'
+    attributes:
+      sensor:
+        name: 'Nombre'
+        description: 'Descripción'
+        kind: 'Tipo'

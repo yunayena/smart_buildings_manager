@@ -5,6 +5,7 @@ class BuildingsController < ApplicationController
   # GET /buildings.json
   def index
     @buildings = Building.all
+    @message = t('.message')
   end
 
   # GET /buildings/1
@@ -28,7 +29,7 @@ class BuildingsController < ApplicationController
 
     respond_to do |format|
       if @building.save
-        format.html { redirect_to @building, notice: 'Building was successfully created.' }
+        format.html { redirect_to @building, notice: t('.notice') }
         format.json { render :show, status: :created, location: @building }
       else
         format.html { render :new }
