@@ -1,0 +1,41 @@
+en:
+  buildings:
+    edit:
+      editing_building: 'Editing building'
+      show: 'Show'
+      back: 'Back'
+    index:
+      listing_buildings: 'Listing buildings'
+      notice: 'Notice'
+      name: 'Name'
+      description: 'Description'
+      address: 'Adress'
+      postal_code: 'Postal code'
+      phone: 'Phone'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      are_you_sure: 'Are you sure?'
+      new_building: 'New building'
+    new:
+      new_building: 'New building'
+      back: 'Back'
+    show:
+      notice: 'Notice'
+      name: 'Name'
+      description: 'Description'
+      address: 'Address'
+      postal_code: 'Postal code'
+      phone: 'Phone'
+      edit: 'Edit'
+      back: 'Back'
+  activerecord:
+    models:
+      building: 'Building'
+    attributes:
+      building:
+        name: 'Name'
+        description: 'Description'
+        address: 'Address'
+        postal_code: 'Postal Code'
+        phone: 'Phone'

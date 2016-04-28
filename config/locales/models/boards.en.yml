@@ -1,0 +1,35 @@
+en:
+  boards:
+    edit:
+      editing_board: 'Editing board'
+      show: 'Show'
+      back: 'Back'
+    index:
+      listing_boards: 'Listing boards'
+      name: 'Name'
+      description: 'Description'
+      model: 'Model'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      are_you_sure: 'Are you sure?'
+      new_board: 'New board'
+    new:
+      new_board: 'New board'
+      form: 'Form'
+      back: 'Back'
+    show:
+      notice: 'Notice'
+      name: 'Name'
+      description: 'Description'
+      edit: 'Edit'
+      back: 'Back'
+      model: 'Model'
+  activerecord:
+    models:
+      board: 'Board'
+    attributes:
+      board:
+        name: 'Name'
+        description: 'Description'
+        model: 'Model'

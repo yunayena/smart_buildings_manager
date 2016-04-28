@@ -1,0 +1,30 @@
+en:
+  locations:
+    edit:
+      editing_location: 'Editing location'
+      Show: 'Show'
+      Back: 'Back'
+    index:
+      Listing_Locations: 'Listing locations'
+      name: 'Name'
+      description: 'Description'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      are_you_sure: 'Are you sure?'
+      New_Location: 'New location'
+    new:
+      New_Location: 'New location'
+      Back: 'Back'
+    show:
+      name: 'Name'
+      description: 'Description'
+      edit: 'Edit'
+      back: 'Back'
+  activerecord:
+    models:
+      location: 'Location'
+    attributes:
+      location:
+        name: 'Name'
+        description: 'Description'

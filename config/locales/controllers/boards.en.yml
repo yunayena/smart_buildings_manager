@@ -1,0 +1,10 @@
+en:
+  boards:
+    index:
+      message: 'List of boards.'
+    create:
+      notice: 'Board was successfully created.'
+    update:
+      notice2: 'Board was successfully updated.'
+    destroy:
+      notice3: 'Board was successfully destroyed.'

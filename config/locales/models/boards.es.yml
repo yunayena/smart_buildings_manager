@@ -1,0 +1,35 @@
+es:
+  boards:
+    edit:
+      editing_board: 'Editar Controlador'
+      show: 'Mostrar'
+      back: 'Atrás'
+    index:
+      listing_boards: 'Lista de controladores'
+      name: 'Nombre'
+      description: 'Descripción'
+      model: 'Modelo'
+      show: 'Mostrar'
+      edit: 'Editar'
+      destroy: 'Destroy'
+      are_you_sure: '¿Está usted seguro?'
+      new_board: 'Nuevo controlador'
+    new:
+      new_board: 'Nuevo controlador'
+      form: 'Formulario'
+      back: 'Atrás'
+    show:
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripción'
+      edit: 'Editar'
+      back: 'Atrás'
+      model: 'Modelo'
+  activerecord:
+    models:
+      board: 'Controlador'
+    attributes:
+      board:
+        name: 'Nombre'
+        description: 'Descripción'
+        model: 'Modelo'

@@ -1,0 +1,10 @@
+en:
+  measures:
+    index:
+      message: 'Lista de mediciones.'
+    create:
+      notice: 'La medición se ha creado correctamente.'
+    update:
+      notice2: 'La medición se ha modificado ccorrectamente.'
+    destroy:
+      notice3: 'La medición se ha eliminado correctamente.'

@@ -1,0 +1,10 @@
+en:
+  measures:
+    index:
+      message: 'List of boards.'
+    create:
+      notice: 'Measure was successfully created.'
+    update:
+      notice2: 'Measure was successfully updated.'
+    destroy:
+      notice3: 'Measure was successfully destroyed.'

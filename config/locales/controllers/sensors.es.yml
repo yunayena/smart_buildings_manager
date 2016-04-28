@@ -1,0 +1,10 @@
+es:
+  sensors:
+    index:
+      message: 'Sensores'
+    create:
+      notice: 'El sensor se ha creado correctamente.'
+    update:
+      notice2: 'El sensor se ha editado correctamente'
+    destroy:
+      notice3: 'El sensor se ha eliminado correctamente'

@@ -1,0 +1,25 @@
+en:
+  measures:
+    edit:
+      editing_measures: 'Editing measures'
+      Show: 'Show'
+      Back: 'Back'
+    index:
+      listing_measures: 'Listing measures'
+      notice: 'Notice'
+      value: 'Value'
+      metric: 'Metric'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      are_you_sure: 'Are you sure?'
+      new_measure: 'New measure'
+    new:
+      new_measure: 'New measure'
+      back: 'Back'
+    show:
+      notice: 'Notice'
+      value: 'Value'
+      metric: 'Metric'
+      edit: 'Edit'
+      back: 'Back'

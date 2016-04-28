@@ -1,0 +1,10 @@
+en:
+  buildings:
+    index:
+      message1: 'List of buildings.'
+    create:
+      notice4: 'The building was created successfully.'
+    update:
+      notice5: 'Building was successfully updated.'
+    destroy:
+      notice6: 'Building was successfully destroyed.'

@@ -1,0 +1,10 @@
+es:
+  locations:
+    index:
+      message: 'Lista de localicaziones'
+    create:
+      notice: 'La localización se ha creado correctamente.'
+    update:
+      notice2: 'La localización se ha editado correctamente'
+    destroy:
+      notice3: 'La localización se ha eliminado correctamente'

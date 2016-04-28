@@ -1,0 +1,32 @@
+es:
+  locations:
+    edit:
+      editing_location: 'Editar localización'
+      Show: 'Mostrar'
+      Back: 'Atrás'
+    index:
+      Listing_Locations: 'Lista localizaciones'
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripción'
+      show: 'Mostrar'
+      edit: 'Editar'
+      destroy: 'Eliminar'
+      are_you_sure: '¿Está usted seguro?'
+      New_Location: 'Nueva localización'
+    new:
+      New_Location: 'Nueva localización'
+      Back: 'Atrás'
+    show:
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripcion'
+      edit: 'Editar'
+      back: 'Atrás'
+  activerecord:
+    models:
+      location: 'Location'
+    attributes:
+      location:
+        name: 'Nombre'
+        description: 'Descripción'

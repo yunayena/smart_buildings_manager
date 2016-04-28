@@ -1,0 +1,25 @@
+es:
+  measures:
+    edit:
+      editing_measures: 'Editar mediciones'
+      show: 'Mostrar'
+      back: 'Atrás'
+    index:
+      listing_measures: 'Lista de mediciones'
+      notice: 'Ficha'
+      value: 'Valor'
+      metric: 'Métrico'
+      show: 'Mostrar'
+      edit: 'Editar'
+      destroy: 'Eliminar'
+      are_you_sure: '¿Está usted seguro?'
+      new_measure: 'Nueva medición'
+    new:
+      new_measure: 'Nueva medición'
+      back: 'Atrás'
+    show:
+      notice: 'Notice'
+      value: 'Valor'
+      metric: 'Metrico'
+      edit: 'Editar'
+      back: 'Atrás'

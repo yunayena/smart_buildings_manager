@@ -1,0 +1,10 @@
+en:
+  Locations:
+    index:
+      message: 'List of Locations.'
+    create:
+      notice: 'Location was successfully created.'
+    update:
+      notice2: 'Location was successfully updated.'
+    destroy:
+      notice3: 'Location was successfully destroyed.'

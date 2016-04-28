@@ -1,0 +1,10 @@
+es:
+  boards:
+    index:
+      message: 'Lista de Controladores'
+    create:
+      notice: 'El controlador se ha creado correctamente.'
+    update:
+      notice2: 'El controlador se ha editado correctamente'
+    destroy:
+      notice3: 'El controlador se ha eliminado correctamente'

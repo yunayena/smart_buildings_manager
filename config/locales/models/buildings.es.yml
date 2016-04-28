@@ -1,0 +1,41 @@
+es:
+  buildings:
+    edit:
+      editing_building: 'Editando edificio'
+      show: 'Mostrar'
+      back: 'Atrás'
+    index:
+      listing_buildings: 'Lista de edificios'
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripción'
+      address: 'Dirección'
+      postal_code: 'Código postal'
+      phone: 'Teléfono'
+      show: 'Mostrar'
+      edit: 'Editar'
+      destroy: 'Eliminar'
+      are_you_sure: '¿Está usted seguro?'
+      new_building: 'Nuevo edificio'
+    new:
+      new_building: 'Nuevo edificio'
+      back: 'Atrás'
+    show:
+      notice: 'Ficha'
+      name: 'Nombre'
+      description: 'Descripcion'
+      address: 'Dirección'
+      postal_code: 'Código postal'
+      phone: 'Teléfono'
+      edit: 'Editar'
+      back: 'Atrás'
+  activerecord:
+    models:
+      building: 'Edificio'
+    attributes:
+      building:
+        name: 'Nombre'
+        description: 'Descripción'
+        address: 'Dirección'
+        postal_code: 'Codigo Postal'
+        phone: 'Teléfono'

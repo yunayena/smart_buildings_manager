@@ -1,0 +1,10 @@
+en:
+  sensors:
+    index:
+      message: 'List of sensors.'
+    create:
+      notice: 'Sensor was successfully created.'
+    update:
+      notice2: 'Sensor was successfully updated.'
+    destroy:
+      notice3: 'Sensor was successfully destroyed.'

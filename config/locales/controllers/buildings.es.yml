@@ -1,6 +1,10 @@
 es:
   buildings:
     index:
-      message: 'Hola esta es un mensaje desde yml'
+      message1: 'Lista de Edificios TURUTU'
     create:
-      notice: ''
+      notice4: 'El edificio se ha creado correctamente.'
+    update:
+      notice5: 'El edificio se ha modificado correctamente'
+    destroy:
+      notice6: 'El edificio se ha eliminado correctamente'
