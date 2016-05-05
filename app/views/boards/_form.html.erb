@@ -1,29 +1,67 @@
-<%= form_for(@board) do |f| %>
-  <% if @board.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+<div class="ui-sortable">
 
-      <ul>
-      <% @board.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="panel panel-default wijets-full-screen">
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :model %><br>
-    <%= f.text_field :model %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+	<div class="panel-heading">
+		<h2>Formulario controlador</h2>
+		<div class="panel-ctrls">
+			<span class="button-icon has-bg">
+				<i class="fa fa-minus"></i>
+			</span>
+		</div>
+	</div>
+
+	<div class="panel-editbox" data-widget-controls=""></div>
+
+	<div class="panel-body">
+		<%= form_for(@board, html: { class: 'form-horizontal row-border' }) do |f| %>
+
+			<% if @board.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@board.errors.count, "error") %>
+						prohibited this board from being saved:</h2>
+					<ul>
+						<% @board.errors.full_messages.each do |message| %>
+						<li><%= message %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<div class="form-group">
+				<%= f.label :name, class: 'col-sm-2 control-label' %>
+				<div class="col-sm-8">
+					<%= f.text_field :name, class: 'form-control tooltips' %>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= f.label :description, class: 'col-sm-2 control-label' %>
+				<div class="col-sm-8">
+					<%= f.text_area :description, class: 'form-control tooltips', rows: 10 %>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%= f.label :model, class: 'col-sm-2 control-label' %>
+				<div class="col-sm-8">
+					<%= f.text_field :model, class: 'form-control tooltips' %>
+				</div>
+			</div>
+
+			<div class="panel-footer">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<%= f.submit 'Enviar', class: 'btn-primary btn' %>
+						<%= link_to 'Cancelar', boards_path(), class: 'btn-default btn' %>
+					</div>
+				</div>
+			</div>
+
+		<% end %>
+	</div>
+
+</div>
+
+
+</div>

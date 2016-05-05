@@ -1,37 +1,78 @@
-<%= form_for(@building) do |f| %>
-  <% if @building.errors.any? %>
+<div class="ui-sortable">
+
+<div class="panel panel-default wijets-full-screen">
+
+	<div class="panel-heading">
+		<h2>Formulario edificio</h2>
+		<div class="panel-ctrls">
+			<span class="button-icon has-bg">
+				<i class="fa fa-minus"></i>
+			</span>
+		</div>
+	</div>
+
+<div class="panel-editbox" data-widget-controls=""></div>
+
+<div class="panel-body">
+    <%= form_for(@building, html: { class: 'form-horizontal row-border' }) do |f| %>
+    <% if @building.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
+        <h2><%= pluralize(@building.errors.count, "error") %>
+            prohibited this building from being saved:</h2>
 
-      <ul>
-      <% @building.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+            <% @building.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
     </div>
-  <% end %>
+    <% end %>
+    <div class="form-group">
+        <%= f.label :name, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+            <%= f.text_field :name, class: 'form-control tooltips' %>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :postal_code %><br>
-    <%= f.text_field :postal_code %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="form-group">
+        <%= f.label :description, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+            <%= f.text_area :description, class: 'form-control tooltips', rows: 10 %>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :address, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+            <%= f.text_field :address, class: 'form-control tooltips' %>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :postal_code, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+            <%= f.text_field :postal_code, class: 'form-control tooltips' %>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :phone, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+            <%= f.text_field :phone, class: 'form-control tooltips' %>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <%= f.submit 'Enviar', class: 'btn-primary btn' %>
+                <%= link_to 'Cancelar', boards_path(), class: 'btn-default btn' %>
+            </div>
+        </div>
+    </div>
+
+    <% end %>
+</div>
+
+</div>
+
+</div>

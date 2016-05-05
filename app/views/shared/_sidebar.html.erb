@@ -1,6 +1,9 @@
+
+<div class="sidebar scroll-content" tabindex="0" style="right: -15px;">
 <div class="sidebar">
 
   <%= render partial: 'shared/welcome' %>
+
 
   <div class="widget stay-on-collapse" id="widget-sidebar">
     <nav role="navigation" class="widget-body">
@@ -16,7 +19,7 @@
 
         <li>
           <a href="javascript:;">
-            <i class="fa fa-columns"></i>
+            <i class="fa fa-building"></i>
             <span><%= t('.buildings') %></span>
           </a>
           <ul class="acc-menu">
@@ -58,7 +61,7 @@
         </li>
         <li>
           <a href="javascript:;">
-            <i class="fa fa-cog fa-spin"></i>
+            <i class="fa fa-dot-circle-o"></i>
             <span><%= t('.sensors') %></span>
           </a>
           <ul class="acc-menu">
@@ -70,7 +73,19 @@
             </li>
           </ul>
         </li>
+
+        <li class="nav-separator">Control</li>
+        <li class="hasChild"><a href="javascript:;"><i class="fa fa-bar-chart-o"></i><span>Históricos</span></a>
+          <ul class="acc-menu">
+            <li><a href="charts-flot.html">Gráficas</a></li>
+          </ul>
+        </li>
+        <li class="hasChild"><a href="app-notes.html"><i class="fa fa-file-text-o"></i><span>Informes</span></a>
+        </li>
+        <li class="hasChild"><a href="app-notes.html"><i class="fa fa-fw fa-bell-o"></i><span>Avisos y alarmas</span></a>
+        </li>
       </ul>
     </nav>
   </div>
+</div>
 </div>

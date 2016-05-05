@@ -1,4 +1,20 @@
-<%= form_for(@sensor) do |f| %>
+<div class="ui-sortable">
+
+<div class="panel panel-default wijets-full-screen">
+
+	<div class="panel-heading">
+		<h2>Formulario controlador</h2>
+		<div class="panel-ctrls">
+			<span class="button-icon has-bg">
+				<i class="fa fa-minus"></i>
+			</span>
+		</div>
+	</div>
+
+	<div class="panel-editbox" data-widget-controls=""></div>
+
+	<div class="panel-body">
+<%= form_for(@sensor, html: { class: 'form-horizontal row-border' }) do |f| %>
   <% if @sensor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sensor.errors.count, "error") %> prohibited this sensor from being saved:</h2>
@@ -11,19 +27,40 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-8">
+      <%= f.text_field :name, class: 'form-control tooltips' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+
+  <div class="form-group">
+    <%= f.label :description, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-8">
+      <%= f.text_area :description, class: 'form-control tooltips', rows: 10 %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :kind %><br>
-    <%= f.number_field :kind %>
+
+  <div class="form-group">
+    <%= f.label :kind, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-8">
+      <%= f.text_field :kind, class: 'form-control tooltips' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <%= f.submit 'Enviar', class: 'btn-primary btn' %>
+        <%= link_to 'Cancelar', boards_path(), class: 'btn-default btn' %>
+      </div>
+    </div>
   </div>
+
 <% end %>
+</div>
+
+</div>
+
+
+</div>

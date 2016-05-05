@@ -1,19 +1,45 @@
 <p id="notice"><%= t('.notice') %></p>
 
-<p>
-  <strong><%= t('.name') %>:</strong>
-  <%= @board.name %>
-</p>
 
-<p>
-  <strong><%= t('.description') %>:</strong>
-  <%= @board.description %>
-</p>
+<div class="col-md-6">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h2><%=t('.informacion_controlador')%></h2>
+				<div class="options">
 
-<p>
-  <strong><%= t('.model') %>:</strong>
-  <%= @board.model %>
-</p>
+				</div>
+			</div>
+			<div class="panel-body panel-no-padding">
+				<table class="table table-striped">
+					<thead>
+						<tr class="info">
+							<th>
+                <p>
+                <strong><%= t('.name') %>:</strong>
+                </p>
+              </th>
+							<th><p>
+                <strong><%= t('.description') %>:</strong>
+
+              </p></th>
+							<th><p>
+                <strong><%= t('.model') %>:</strong>
+
+              </p></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= @board.name %></td>
+							<td><%= @board.description %></td>
+							<td> <%= @board.model %></td>
+						</tr>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
 <%= link_to t('.edit'), edit_board_path(@board) %> |
 <%= link_to t('.back'), boards_path %>

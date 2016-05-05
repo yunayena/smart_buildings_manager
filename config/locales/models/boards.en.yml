@@ -20,6 +20,7 @@ en:
       back: 'Back'
     show:
       notice: 'Notice'
+      informacion_controlador: 'Information board'
       name: 'Name'
       description: 'Description'
       edit: 'Edit'

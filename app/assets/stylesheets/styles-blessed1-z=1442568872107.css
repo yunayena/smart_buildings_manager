@@ -5514,6 +5514,7 @@ i.ar {
 }
 /*Textarea*/
 textarea {
+  resize: none;
   border-radius: 2px;
   border: 1px solid #e0e0e0;
   border-top: 1px solid #dbdbdb;
@@ -8999,9 +9000,9 @@ ul.demo-btns > li {
 /*
  * Default Layout Theme
  *
- * Created for jquery.layout 
+ * Created for jquery.layout
  *
- * Copyright (c) 2010 
+ * Copyright (c) 2010
  *   Fabrizio Balliano (http://www.fabrizioballiano.net)
  *   Kevin Dalman (http://allpro.net)
  *
@@ -9115,7 +9116,7 @@ ul.demo-btns > li {
   filter: alpha(opacity=100);
   /* on-hover, show the resizer-bar normally */
 }
-/* sliding resizer - add 'outside-border' to resizer on-hover 
+/* sliding resizer - add 'outside-border' to resizer on-hover
 		 * this sample illustrates how to target specific panes and states */
 .ui-layout-resizer-north-sliding-hover {
   border-bottom-width: 0px;
@@ -9173,7 +9174,7 @@ ul.demo-btns > li {
 }
 /*
  *	PANE-MASKS
- *	these styles are hard-coded on mask elems, but are also 
+ *	these styles are hard-coded on mask elems, but are also
  *	included here as !important to ensure will overrides any generic styles
  */
 .ui-layout-mask {

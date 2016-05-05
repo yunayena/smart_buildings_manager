@@ -20,6 +20,7 @@ es:
       back: 'Atrás'
     show:
       notice: 'Ficha'
+      informacion_controlador: 'Información controlador'
       name: 'Nombre'
       description: 'Descripción'
       edit: 'Editar'
