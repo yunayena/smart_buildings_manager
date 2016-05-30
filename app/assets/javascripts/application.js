@@ -14,6 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+
+//= require plugins/datatables/jquery.dataTables
+//= require plugins/datatables/TableTools
+//= require plugins/jquery-editable/jquery.editable
+//= require plugins/datatables/dataTables.editor
+//= require plugins/datatables/dataTables.editor.bootstrap
+//= require plugins/datatables/dataTables.bootstrap
+//= require custom_datatable
+
 //= require plugins/easypiechart/jquery.easypiechart
 //= require plugins/sparklines/jquery.sparklines.min
 //= require plugins/jstree/dist/jstree.min
@@ -35,5 +44,4 @@
 //= require plugins/form-daterangepicker/daterangepicker
 
 $(document).ready(function() {
-
 });

@@ -1,19 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('.name') %>:</strong>
-  <%= @sensor.name %>
-</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>
+            <%= t('.informacion_sensor')%>
+        </h2>
+    </div>
+    <div class="panel-body panel-no-padding">
 
-<p>
-  <strong><%= t('.description') %>:</strong>
-  <%= @sensor.description %>
-</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr role="row">
+                        <th><%= t('.name') %></th>
+                        <th><%= t('.description') %></th>
+                        <th><%= t('.kind') %></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= @sensor.name %>
+                        </td>
+                        <td>
+                            <%= @sensor.description %>
+                        </td>
+                        <td>
+                            <%= @sensor.kind %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--end table-->
+    </div>
+</div>
+<%= link_to t('.destroy'), @building, method: :delete, :class => "fa fa-times-circle" %>
 
-<p>
-  <strong><%= t('.kind') %>:</strong>
-  <%= @sensor.kind %>
-</p>
+<%= link_to t('.edit'), edit_sensor_path(@sensor), :class => "fa fa-pencil-square-o" %>
 
-<%= link_to t('.edit'), edit_sensor_path(@sensor) %> |
-<%= link_to t('.back'), sensors_path %>
+<%= link_to t('.back'), sensors_path, :class => "fa fa-mail-reply" %>

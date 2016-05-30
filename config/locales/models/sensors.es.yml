@@ -1,9 +1,9 @@
 es:
   sensors:
     edit:
-      editing_sensors: 'Editing sensors'
-      show: 'Show'
-      back: 'Back'
+      editing_sensor: 'Editar sensor'
+      show: 'Mostrar'
+      back: 'Atrás'
     index:
       listing_sensors: 'Lista de sensores'
       notice: 'Ficha'
@@ -19,7 +19,7 @@ es:
       new_sensor: 'Nuevo sensor'
       back: 'Atrás'
     show:
-      notice: 'Ficha'
+      informacion_sensor: 'Información sensor'
       name: 'Nombre'
       description: 'Descripcion'
       kind: 'Tipo'

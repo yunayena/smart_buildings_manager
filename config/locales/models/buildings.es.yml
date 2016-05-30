@@ -6,29 +6,31 @@ es:
       back: 'Atrás'
     index:
       listing_buildings: 'Lista de edificios'
-      notice: 'Ficha'
       name: 'Nombre'
       description: 'Descripción'
       address: 'Dirección'
-      postal_code: 'Código postal'
+      postal_code: 'C.P.'
       phone: 'Teléfono'
       show: 'Mostrar'
       edit: 'Editar'
       destroy: 'Eliminar'
       are_you_sure: '¿Está usted seguro?'
       new_building: 'Nuevo edificio'
+      Actions: 'Acciones'
     new:
       new_building: 'Nuevo edificio'
       back: 'Atrás'
     show:
+      informacion_edificio: 'Información edificio'
       notice: 'Ficha'
       name: 'Nombre'
       description: 'Descripcion'
       address: 'Dirección'
-      postal_code: 'Código postal'
+      postal_code: 'C.P.'
       phone: 'Teléfono'
       edit: 'Editar'
       back: 'Atrás'
+      destroy: "Eliminar"
   activerecord:
     models:
       building: 'Edificio'
@@ -37,5 +39,5 @@ es:
         name: 'Nombre'
         description: 'Descripción'
         address: 'Dirección'
-        postal_code: 'Codigo Postal'
+        postal_code: 'C.P.'
         phone: 'Teléfono'

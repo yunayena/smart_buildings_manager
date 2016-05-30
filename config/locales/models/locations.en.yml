@@ -20,7 +20,7 @@ en:
       name: 'Name'
       description: 'Description'
       edit: 'Edit'
-      back: 'Back'
+      Back: 'Back'
   activerecord:
     models:
       location: 'Location'

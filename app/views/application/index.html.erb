@@ -1,4 +1,143 @@
 <h1><%= t('.title') %></h1>
+<div class="container-fluid">
+    <div data-widget-group="group1" class="ui-sortable">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/buildings" class="info-tile tile-midnightblue">
+                    <div class="tile-heading">
+                        <div class="pull-left">Sus edificios</div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="pull-left">
+                            <i class="fa fa-building"></i>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/locations" class="info-tile tile-midnightblue">
+                    <div class="tile-heading">
+                        <div class="pull-left">Sus localizaciones</div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="pull-left">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/boards" class="info-tile tile-midnightblue">
+                    <div class="tile-heading">
+                        <div class="pull-left">Sus controladores</div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="pull-left">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/sensors" class="info-tile tile-midnightblue">
+                    <div class="tile-heading">
+                        <div class="pull-left">Sus sensores</div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="pull-left">
+                            <i class="fa fa-dot-circle-o"></i>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="amazo-tile tile-white" href="#">
+                    <div class="tile-heading">
+                        <div class="title">Goals</div>
+                        <div class="secondary">orders this month</div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="content">3,690</div>
+                    </div>
+                    <div class="tile-footer">
+                        <span class="info-text text-right">82% of 4,500</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="amazo-tile tile-white">
+                    <div class="tile-heading">
+                        <span class="title">Commision</span>
+                        <span class="secondary">past 28 days</span>
+                    </div>
+                    <div class="tile-body">
+                        <span class="content">$9,500</span>
+                    </div>
+                    <div class="tile-footer">
+                        <span class="info-text text-right" style="color: #94c355">9.2%
+                            <i class="fa fa-level-up"></i>
+                        </span>
+                        <div id="sparkline-commission" class="sparkline">
+                            <canvas width="696" height="32" style="display: inline-block; width: 696px; height: 32px; vertical-align: top;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amazo-tile tile-white">
+                    <div class="tile-heading">
+                        <div class="title">Items</div>
+                        <div class="secondary">past 28 days</div>
+                    </div>
+                    <div class="tile-body">
+                        <span class="content">407</span>
+                    </div>
+                    <div class="tile-footer text-center">
+                        <span class="info-text text-right" style="color: #f04743">13.4%
+                            <i class="fa fa-level-down"></i>
+                        </span>
+                        <div id="sparkline-item" class="sparkline-bar">
+                            <canvas width="164" height="32" style="display: inline-block; width: 164px; height: 32px; vertical-align: top;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a class="info-tile tile-danger" width= "672" height="127">
+                    <div class="tile-heading">
+                        <div class="pull-left">Avisos y alarmas</div>
+                        <div class="pull-right"></div>
+                    </div>
+                    <div class="tile-body">
+                        <div class="pull-left">
+                            <i class="fa fa-fw fa-bell-o"></i>
+                        </div>
+                        <div class="pull-right">2</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 <%= link_to t('.change_locale_en'), boards_path({ locale: :en }), class: 'link-locale' %>
 <%= link_to t('.change_locale_es'), boards_path({ locale: :es }), class: 'link-locale' %>

@@ -5,6 +5,7 @@ en:
       show: 'Show'
       back: 'Back'
     index:
+      Actions: 'Actions'
       listing_boards: 'Listing boards'
       name: 'Name'
       description: 'Description'

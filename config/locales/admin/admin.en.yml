@@ -1,7 +1,7 @@
 en:
   application:
     index:
-      title: 'Hi turutu'
+      title: 'You welcome to your dashboard.'
   layouts:
     application:
       SmartBuildingsManager: Smart Buildings Manager
@@ -33,5 +33,8 @@ en:
       manage_boards: "Manage boards"
       create_new_sensor: "Create new sensor"
       manage_sensors: "Manage sensors"
+      Graficas: "Graphics"
+      Avisos_y_alarmas: "Warnings and alarms"
+      Informes: "Reports"
     welcome:
       welcome: "Welcome"

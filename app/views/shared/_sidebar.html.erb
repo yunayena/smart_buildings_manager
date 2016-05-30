@@ -71,21 +71,20 @@
             <li>
               <%= link_to t('.manage_sensors'), sensors_path() %>
             </li>
+            <li><a href="javascript:;"><i class="fa fa-bar-chart-o"></i> <%= t('.Graficas')%></a>
+            </li>
+            <li> <a href="javascript:;"><i class="fa fa-fw fa-bell-o"></i><%= t('.Avisos_y_alarmas')%></a>
+            </li>
           </ul>
         </li>
 
         <li class="nav-separator">Control</li>
-        <li class="hasChild"><a href="javascript:;"><i class="fa fa-bar-chart-o"></i><span>Históricos</span></a>
-          <ul class="acc-menu">
-            <li><a href="charts-flot.html">Gráficas</a></li>
-          </ul>
+
+        <li class="hasChild"><a href="app-notes.html"><i class="fa fa-file-text-o"></i><%=t('.Informes') %></a>
         </li>
-        <li class="hasChild"><a href="app-notes.html"><i class="fa fa-file-text-o"></i><span>Informes</span></a>
-        </li>
-        <li class="hasChild"><a href="app-notes.html"><i class="fa fa-fw fa-bell-o"></i><span>Avisos y alarmas</span></a>
-        </li>
+
       </ul>
-    </nav>
+     </nav>
   </div>
 </div>
 </div>

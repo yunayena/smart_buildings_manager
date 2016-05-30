@@ -1,7 +1,7 @@
 es:
   application:
     index:
-      title: 'Hola chula'
+      title: 'Bienvenido a su panel de usuario.'
   layouts:
     application:
       SmartBuildingsManager: 'Smart Buildings Manager'
@@ -33,5 +33,8 @@ es:
       manage_boards: "Administrar controladores"
       create_new_sensor: "Crear nuevo sensor"
       manage_sensors: "Administrar sensores"
+      Graficas: "Gráficas"
+      Avisos_y_alarmas: "Avisos y alarmas"
+      Informes: "Informes"
     welcome:
       welcome: "Bienvenido"

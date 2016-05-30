@@ -1,29 +1,36 @@
-<p id="notice"><%= t('.notice') %></p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2> <%= t('informacion_edificio')%> </h2>
+    </div>
+    <div class="panel-body panel-no-padding">
 
-<p>
-  <strong> <%= t('.name') %>:</strong>
-  <%= @building.name %>
-</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr role="row">
+                        <th><%= t('.name') %></th>
+                        <th><%= t('.description') %></th>
+                        <th><%= t('.address') %></th>
+                        <th><%= t('.postal_code') %></th>
+                        <th><%= t('.phone') %></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= @building.name %></td>
+                        <td><%= @building.description %></td>
+                        <td><%= @building.address %></td>
+                        <td><%= @building.postal_code %></td>
+                        <td><%= @building.phone %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--end table-->
+    </div>
+</div>
+<%= link_to t('.destroy'), @building, method: :delete, :class => "fa fa-times-circle" %>
 
-<p>
-  <strong><%= t('.description') %>:</strong>
-  <%= @building.description %>
-</p>
+<%= link_to t('.edit'), edit_building_path(@building), :class => "fa fa-pencil-square-o" %>
 
-<p>
-  <strong><%= t('.address') %>:</strong>
-  <%= @building.address %>
-</p>
-
-<p>
-  <strong><%= t('.postal_code') %>:</strong>
-  <%= @building.postal_code %>
-</p>
-
-<p>
-  <strong><%= t('.phone') %>:</strong>
-  <%= @building.phone %>
-</p>
-
-<%= link_to t('.edit'), edit_building_path(@building) %> |
-<%= link_to t('.back'), buildings_path %>
+<%= link_to t('.back'), buildings_path, :class => "fa fa-mail-reply" %>

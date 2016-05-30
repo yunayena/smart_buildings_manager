@@ -22,7 +22,7 @@ es:
       name: 'Nombre'
       description: 'Descripcion'
       edit: 'Editar'
-      back: 'Atrás'
+      Back: 'Atrás'
   activerecord:
     models:
       location: 'Location'

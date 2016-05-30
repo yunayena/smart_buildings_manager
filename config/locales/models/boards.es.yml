@@ -5,6 +5,7 @@ es:
       show: 'Mostrar'
       back: 'Atrás'
     index:
+      Actions: 'Acciones'
       listing_boards: 'Lista de controladores'
       name: 'Nombre'
       description: 'Descripción'

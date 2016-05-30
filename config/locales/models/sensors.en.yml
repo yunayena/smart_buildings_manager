@@ -1,7 +1,7 @@
 en:
   sensors:
     edit:
-      editing_sensors: 'Editing sensors'
+      editing_sensor: 'Editing sensor'
       show: 'Show'
       back: 'Back'
     index:
@@ -20,6 +20,7 @@ en:
       back: 'Back'
     show:
       notice: 'Notice'
+      informacion_sensor: 'Information sensor'
       name: 'Name'
       description: 'Description'
       kind: 'Kind'

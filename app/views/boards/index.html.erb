@@ -1,48 +1,43 @@
-<p id="notice"><%= notice %></p>
-<div class="col-md-6">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-        <h2><%= t('.listing_boards') %></h2>
-				<div class="options">
+<div class="panel panel-default" id="panel-inline">
 
-				</div>
-			</div>
-			<div class="panel-body panel-no-padding">
-				<table class="table table-striped">
+    <div class="panel-heading">
+			<%= t('.listing_boards') %></h2>
+			<div class="panel-ctrls"></div>
+	</div>
+
+	<div class="panel-body panel-no-padding">
+
+			<table class="datatables" id="editable">
+
 					<thead>
-						<tr class="info">
-							<th>
-                <p>
-                <strong><%= t('.name') %>:</strong>
-                </p>
-              </th>
-							<th><p>
-                <strong><%= t('.description') %>:</strong>
-
-              </p></th>
-							<th><p>
-                <strong><%= t('.model') %>:</strong>
-
-              </p></th>
-						</tr>
+						      <tr role="row">
+											<th><%= t('.name') %></th>
+											<th><%=t('.description') %></th>
+											<th><%= t('.model') %></th>
+											<th><%= t('.Actions') %> </th>
+									</tr>
 					</thead>
+
           <tbody>
-            <% @boards.each do |board| %>
+						<% @boards.each_with_index do |board, index| %>
+						<tr role="row" class="<%= index%2==0 ? 'odd' : 'even' %>">
               <tr>
                 <td><%= board.name %></td>
                 <td><%= board.description %></td>
                 <td><%= board.model %></td>
-                <td><%= link_to t('.show'), board %></td>
-                <td><%= link_to t('.edit'), edit_board_path(board) %></td>
-                <td><%= link_to t('.destroy'), board, method: :delete, data: { confirm: t('.are_you_sure') } %></td>
+                <td>
+								<%= link_to t('.show'), board %>
+                <%= link_to t('.edit'), edit_board_path(board) %>
+                <%= link_to t('.destroy'), board, method: :delete, data: { confirm: t('.are_you_sure') } %>
+							  </td>
               </tr>
             <% end %>
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
+				<!--end table-->
+        <div class="panel-footer"></div>
 
-<br>
+    </div>
 
-<%= link_to t('.new_board'), new_board_path %>
+</div>
+<%= link_to t('.new_board'), new_board_path, :class=>"fa fa-plus" %>
