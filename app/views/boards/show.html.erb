@@ -24,8 +24,10 @@
 		</div>
 	</div>
 </div>
-<%= link_to t('.destroy'), @board, method: :delete, :class => "fa fa-times-circle" %>
+<div>
+<%= link_to t('.destroy'), @board, method: :delete, :class => "btn btn-danger-alt" %>
 
-<%= link_to t('.edit'), edit_building_path(@board), :class => "fa fa-pencil-square-o" %>
+<%= link_to t('.edit'), edit_board_path(@board), :class => "btn btn-warning-alt" %>
 
-<%= link_to t('.back'), boards_path, :class => "fa fa-mail-reply" %>
+<%= link_to t('.back'), boards_path, :class => "btn btn-inverse-alt" %>
+</div>

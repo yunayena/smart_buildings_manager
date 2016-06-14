@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :sensors do
     resources :measures
+    collection do
+      get :test_pdf
+    end
   end
 
   resources :boards

@@ -10,6 +10,7 @@ class SensorsController < ApplicationController
   # GET /sensors/1
   # GET /sensors/1.json
   def show
+    @sensor_measures = @sensor.measures.order('created_at desc').limit(10).map{|m| { time: m.created_at, value: m.value } }
   end
 
   # GET /sensors/new
@@ -61,6 +62,21 @@ class SensorsController < ApplicationController
     end
   end
 
+  def test_pdf
+    # ...
+    # Aqui va el código de donde sacas todos los datos del sensor
+    # ...
+    @data_ids = Sensor.all.map(&:id)
+    @data_measures = Sensor.all.map(&:measures)
+    @data_names = Sensor.all.map(&:name)
+
+    respond_to do |format|
+      format.pdf do
+        render pdf: "nombre_del_fichero", layout: 'pdf'
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sensor
@@ -69,6 +85,6 @@ class SensorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:name, :description, :kind)
+      params.require(:sensor).permit(:name, :description, :kind, :board_id)
     end
 end

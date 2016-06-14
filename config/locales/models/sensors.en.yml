@@ -1,5 +1,8 @@
 en:
   sensors:
+    form:
+      formulario_sensor: 'Form sensor'
+      select_a_board: 'Select a board'
     edit:
       editing_sensor: 'Editing sensor'
       show: 'Show'
@@ -34,3 +37,4 @@ en:
         name: 'Name'
         description: 'Description'
         kind: 'Kind'
+        board_id: 'Board'

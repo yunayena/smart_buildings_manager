@@ -1,5 +1,8 @@
 en:
   locations:
+    form:
+      select_a_building: 'Select a building'
+      formulario_localizacion: 'Form location'
     edit:
       editing_location: 'Editing location'
       Show: 'Show'

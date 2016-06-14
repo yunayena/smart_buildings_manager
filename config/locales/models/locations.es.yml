@@ -1,5 +1,8 @@
 es:
   locations:
+    form:
+      select_a_building: 'Selecciona un edificio'
+      formulario_localizacion: 'Formulario localización'
     edit:
       editing_location: 'Editar localización'
       Show: 'Mostrar'
@@ -30,3 +33,4 @@ es:
       location:
         name: 'Nombre'
         description: 'Descripción'
+        building_id: 'Edificio'

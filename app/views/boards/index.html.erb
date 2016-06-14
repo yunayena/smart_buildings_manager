@@ -21,16 +21,15 @@
           <tbody>
 						<% @boards.each_with_index do |board, index| %>
 						<tr role="row" class="<%= index%2==0 ? 'odd' : 'even' %>">
-              <tr>
                 <td><%= board.name %></td>
                 <td><%= board.description %></td>
                 <td><%= board.model %></td>
                 <td>
-								<%= link_to t('.show'), board %>
-                <%= link_to t('.edit'), edit_board_path(board) %>
-                <%= link_to t('.destroy'), board, method: :delete, data: { confirm: t('.are_you_sure') } %>
+								<%= link_to t('.show'), board, :class => "btn btn-inverse-alt" %>
+                <%= link_to t('.edit'), edit_board_path(board), :class => "btn btn-warning-alt" %>
+                <%= link_to t('.destroy'), board, method: :delete,  :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
 							  </td>
-              </tr>
+            </tr>
             <% end %>
 					</tbody>
 				</table>
@@ -40,4 +39,4 @@
     </div>
 
 </div>
-<%= link_to t('.new_board'), new_board_path, :class=>"fa fa-plus" %>
+<%= link_to t('.new_board'), new_board_path, :class=>"btn btn-inverse"%>

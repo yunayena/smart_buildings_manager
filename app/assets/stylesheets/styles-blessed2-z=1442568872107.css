@@ -7121,6 +7121,9 @@ footer {
 footer ul {
   margin: 0;
 }
+footer ul li h6 {
+  margin-top: 10px;
+}
 #layout-fixed {
   height: 100%;
 }

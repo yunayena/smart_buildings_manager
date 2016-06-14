@@ -1,5 +1,8 @@
 es:
   sensors:
+    form:
+      formulario_sensor: 'Formulario sensor'
+      select_a_board: 'Seleciona un controlador'
     edit:
       editing_sensor: 'Editar sensor'
       show: 'Mostrar'
@@ -33,3 +36,4 @@ es:
         name: 'Nombre'
         description: 'Descripción'
         kind: 'Tipo'
+        board_id: 'Controlador'

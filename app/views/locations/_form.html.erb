@@ -3,7 +3,7 @@
 	<div class="panel panel-default wijets-full-screen">
 
 		<div class="panel-heading">
-			<h2>Formulario localización</h2>
+			<h2><%= t('.formulario_localizacion')%></h2>
 			<div class="panel-ctrls">
 				<span class="button-icon has-bg">
 					<i class="fa fa-minus"></i>
@@ -27,6 +27,15 @@
 				</ul>
 			</div>
 			<% end %>
+
+			<div class="form-group">
+				<%= f.label :building_id, class: 'col-sm-2 control-label' %>
+				<div class="col-sm-8">
+					<%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, @location.building_id),
+								class: 'form-control tooltips', include_blank: t('.select_a_building') %>
+				</div>
+			</div>
+
 
 			<div class="form-group">
 				<%= f.label :name, class: 'col-sm-2 control-label' %>

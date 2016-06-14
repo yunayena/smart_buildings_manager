@@ -34,9 +34,9 @@
                     <td><%= building.postal_code %></td>
                     <td><%= building.phone %></td>
                     <td>
-                        <%= link_to t('.show'), building %>
-                        <%= link_to t('.edit'), edit_building_path(building) %>
-                        <%= link_to t('.destroy'), building, method: :delete, data: { confirm: t('.are_you_sure') } %>
+                        <%= link_to t('.show'), building, :class => "btn btn-inverse-alt" %>
+                        <%= link_to t('.edit'), edit_building_path(building),  :class => "btn btn-warning-alt" %>
+                        <%= link_to t('.destroy'), building, method: :delete,  :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
                     </td>
                 </tr>
                 <% end %>
@@ -50,4 +50,4 @@
     </div>
 
 </div>
-<%= link_to t('.new_building'), new_building_path, :class=>"fa fa-plus" %>
+<%= link_to t('.new_building'), new_building_path, :class=>"btn btn-inverse" %>

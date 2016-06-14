@@ -23,8 +23,8 @@
         <!--end table-->
     </div>
 </div>
-<%= link_to t('.destroy'), @location, method: :delete, :class => "fa fa-times-circle" %>
+<%= link_to t('.destroy'), @location, method: :delete, :class => "btn btn-danger-alt" %>
 
-<%= link_to t('.edit'), edit_location_path(@location), :class => "fa fa-pencil-square-o" %>
+<%= link_to t('.edit'), edit_location_path(@location), :class => "btn btn-warning-alt" %>
 
-<%= link_to t('.back'), locations_path, :class => "fa fa-mail-reply" %>
+<%= link_to t('.back'), locations_path, :class => "btn btn-inverse-alt" %>

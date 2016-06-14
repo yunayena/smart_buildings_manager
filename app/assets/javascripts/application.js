@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+//= require moment.min
+//= require chart
+//= require raphael.min
+//= require morris.min
 
 //= require plugins/datatables/jquery.dataTables
 //= require plugins/datatables/TableTools

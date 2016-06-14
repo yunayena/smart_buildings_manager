@@ -1,5 +1,8 @@
 es:
   boards:
+    form:
+      select_a_location: 'Seleccionar localización'
+      formulario_controlador: 'Formulario controlador'
     edit:
       editing_board: 'Editar Controlador'
       show: 'Mostrar'
@@ -25,6 +28,7 @@ es:
       name: 'Nombre'
       description: 'Descripción'
       edit: 'Editar'
+      destroy: 'Eliminar'
       back: 'Atrás'
       model: 'Modelo'
   activerecord:
@@ -35,3 +39,4 @@ es:
         name: 'Nombre'
         description: 'Descripción'
         model: 'Modelo'
+        location_id: 'Localización'

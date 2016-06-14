@@ -29,8 +29,8 @@
         <!--end table-->
     </div>
 </div>
-<%= link_to t('.destroy'), @building, method: :delete, :class => "fa fa-times-circle" %>
+<%= link_to t('.destroy'), @building, method: :delete, :class => "btn btn-danger-alt" %>
 
-<%= link_to t('.edit'), edit_building_path(@building), :class => "fa fa-pencil-square-o" %>
+<%= link_to t('.edit'),  edit_building_path(@building), :class => "btn btn-warning-alt" %>
 
-<%= link_to t('.back'), buildings_path, :class => "fa fa-mail-reply" %>
+<%= link_to t('.back'), buildings_path, :class => "btn btn-inverse-alt" %>

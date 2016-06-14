@@ -25,9 +25,9 @@
                     <td><%= sensor.name %></td>
                     <td><%= sensor.description %></td>
                     <td><%= sensor.kind %></td>
-                    <td><%= link_to t('.show'), sensor %>
-                    <%= link_to t('.edit'), edit_sensor_path(sensor) %>
-                    <%= link_to t('.destroy'), sensor, method: :delete, data: { confirm: t('.are_you_sure') } %>
+                    <td><%= link_to t('.show'), sensor, :class => "btn btn-inverse-alt"  %>
+                    <%= link_to t('.edit'), sensor, method: :edit, :class => "btn btn-warning-alt" %>
+                    <%= link_to t('.destroy'), sensor, method: :delete, :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
                   </td>
                 </tr>
                 <% end %>
@@ -39,4 +39,4 @@
     </div>
 
   </div>
-  <%= link_to t('.new_sensor'), new_sensor_path, :class=>"fa fa-plus" %>
+  <%= link_to t('.new_sensor'), new_sensor_path, :class=>"btn btn-inverse" %>

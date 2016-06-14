@@ -53,5 +53,8 @@
     </div>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <% if content_for?(:extra_scripts) %>
+      <%= yield :extra_scripts %>
+    <% end %>
   </body>
 </html>
