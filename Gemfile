@@ -42,7 +42,6 @@ gem 'grape'
 #his gem disables the security feature of strong_params at the model layer
 gem 'hashie-forbidden_attributes'
 
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -54,4 +53,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
 end
