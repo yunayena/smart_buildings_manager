@@ -33,5 +33,6 @@ module SmartBuildingsManager
     mount V1::Building
     mount V1::Location
     mount V1::Sensor
+    mount V1::Measure
   end
 end
