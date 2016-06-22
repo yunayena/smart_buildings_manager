@@ -26,7 +26,7 @@
                     <td><%= sensor.description %></td>
                     <td><%= sensor.kind %></td>
                     <td><i class="fa fa-bar-chart-o"></i> <%= link_to t('.show'), sensor, :class => "btn btn-inverse-alt"  %>
-                    <%= link_to t('.edit'), sensor, method: :edit, :class => "btn btn-warning-alt" %>
+                    <%= link_to t('.edit'), edit_sensor_path(sensor), :class => "btn btn-warning-alt" %>
                     <%= link_to t('.destroy'), sensor, method: :delete, :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
                   </td>
                 </tr>
