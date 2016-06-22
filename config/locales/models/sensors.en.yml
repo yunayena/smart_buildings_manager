@@ -22,6 +22,7 @@ en:
       new_sensor: 'New sensor'
       back: 'Back'
     show:
+      sensor_evolution: 'Evolution sensor'
       notice: 'Notice'
       informacion_sensor: 'Information sensor'
       name: 'Name'
@@ -29,6 +30,7 @@ en:
       kind: 'Kind'
       edit: 'Edit'
       back: 'Back'
+      destroy: 'Destroy'
   activerecord:
     models:
       sensor: 'Sensor'

@@ -10,6 +10,7 @@ es:
       home: 'Inicio'
       dashboard: 'Panel de control'
     headerbar:
+      sbm: 'Smart Buildings Manager'
       profile: 'Perfil'
       account: 'Cuenta'
       settings: 'Ajustes'

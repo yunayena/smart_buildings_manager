@@ -10,6 +10,9 @@
             <table class="table">
                 <thead>
                     <tr role="row">
+                        <th><%= t('.building')%></th>
+                        <th><%= t('.location')%></th>
+                        <th><%= t('.board')%></th>
                         <th><%= t('.name') %></th>
                         <th><%= t('.description') %></th>
                         <th><%= t('.kind') %></th>
@@ -17,6 +20,12 @@
                 </thead>
                 <tbody>
                     <tr>
+                      <td> <%= @sensor.board_id %>
+                      </td>
+                      <td> <%= @sensor.board_id %>
+                      </td>
+                        <td> <%= @sensor.board_id %>
+                        </td>
                         <td>
                             <%= @sensor.name %>
                         </td>
@@ -64,7 +73,7 @@
 <% end %>
 <!--PIE-->
 
-<%= link_to t('.destroy'), @building, method: :delete, :class => "btn btn-danger-alt" %>
+<%= link_to t('.destroy'), @sensor, method: :delete, :class => "btn btn-danger-alt" %>
 
 <%= link_to t('.edit'), @sensor, method: :edit, :class => "btn btn-warning-alt" %>
 

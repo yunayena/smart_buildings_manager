@@ -3,7 +3,7 @@ $(function() {
   // Initialize Data Tables
   // -------------------------------
   $('.datatables').dataTable({ });
-  $('.dataTables_filter input').attr('placeholder', 'Search...');
+  $('.dataTables_filter input').attr('placeholder', 'Buscar...');
 
   //DOM Manipulation to move datatable elements integrate to panel
   $('#panel-inline .panel-ctrls').append($('#panel-inline .dataTables_filter').addClass("pull-right")).find("label").addClass("panel-ctrls-center");
@@ -13,7 +13,7 @@ $(function() {
   $('#panel-inline .panel-footer').append($(" #panel-inline .dataTable+.row"));
   $('#panel-inline .dataTables_paginate>ul.pagination').addClass("pull-right");
 
-  $('.dataTables_filter input').addClass('form-control').attr('placeholder', 'Search...');
+  $('.dataTables_filter input').addClass('form-control').attr('placeholder', 'Buscar...');
   $('.dataTables_length select').addClass('form-control');
 
   //add icons

@@ -1,7 +1,7 @@
 <div class="panel panel-default" id="panel-inline">
 
     <div class="panel-heading">
-        <h2><%= t('.listing_buildings') %></h2>
+        <h2><%= t('.listing_sensors') %></h2>
         <div class="panel-ctrls"></div>
     </div>
 
@@ -25,7 +25,7 @@
                     <td><%= sensor.name %></td>
                     <td><%= sensor.description %></td>
                     <td><%= sensor.kind %></td>
-                    <td><%= link_to t('.show'), sensor, :class => "btn btn-inverse-alt"  %>
+                    <td><i class="fa fa-bar-chart-o"></i> <%= link_to t('.show'), sensor, :class => "btn btn-inverse-alt"  %>
                     <%= link_to t('.edit'), sensor, method: :edit, :class => "btn btn-warning-alt" %>
                     <%= link_to t('.destroy'), sensor, method: :delete, :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
                   </td>

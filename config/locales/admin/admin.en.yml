@@ -9,7 +9,9 @@ en:
     breadcrumb:
       home: 'Home'
       dashboard: 'Dashboard'
+
     headerbar:
+      sbm: 'Smart Buildings Manager'
       profile: 'Profile'
       account: 'Account'
       settings: 'Settings'

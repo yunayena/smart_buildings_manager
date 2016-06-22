@@ -22,12 +22,14 @@ es:
       new_sensor: 'Nuevo sensor'
       back: 'Atrás'
     show:
+      sensor_evolution: 'Evolución sensor'
       informacion_sensor: 'Información sensor'
       name: 'Nombre'
-      description: 'Descripcion'
+      description: 'Descripción'
       kind: 'Tipo'
       edit: 'Editar'
       back: 'Atrás'
+      destroy: 'Eliminar'
   activerecord:
     models:
       sensor: 'Sensor'

@@ -15,7 +15,7 @@ es:
       model: 'Modelo'
       show: 'Mostrar'
       edit: 'Editar'
-      destroy: 'Destroy'
+      destroy: 'Eliminar'
       are_you_sure: '¿Está usted seguro?'
       new_board: 'Nuevo controlador'
     new:

@@ -5,7 +5,7 @@ $.extend( true, $.fn.dataTable.defaults, {
 		"t"+
 		"<'row'<'col-sm-6'i><'col-sm-6'p>>",
 	"oLanguage": {
-		"sLengthMenu": "_MENU_ records per page",
+		"sLengthMenu": "_MENU_ elementos por página",
 		"sSearch": ""
 	}
 } );
@@ -249,4 +249,3 @@ if ( $.fn.DataTable.TableTools ) {
 		}
 	} );
 }
-
