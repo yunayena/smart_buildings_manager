@@ -28,12 +28,13 @@ module SmartBuildingsManager
         requires :attributes, type: Hash, desc: 'Measure object to create' do
           requires :value, type: String, desc: 'Value of measure'
           requires :metric, type: String, desc: 'Metric of measure'
+          requires :sensor_id, type: String, desc: 'Sensor of measure'
         end
       end
       put do
         begin
           authenticate!
-          safe_params = clean_params(params[:attributes]).permit(:value, :metric)
+          safe_params = clean_params(params[:attributes]).permit(:value, :metric, :sensor_id)
 
           if safe_params
             measure = ::Measure.find(params[:id])
@@ -67,13 +68,14 @@ module SmartBuildingsManager
        requires :attributes, type: Hash, desc: 'Measure object to create' do
          requires :value, type: String, desc: 'Value of measure'
          requires :metric, type: String, desc: 'Metric of measure'
+         requires :sensor_id, type: String, desc: 'Sensor of measure'
        end
      end
      post do
        begin
          authenticate!
          safe_params = clean_params(params[:attributes])
-                       .permit(:value, :metric)
+                       .permit(:value, :metric, :sensor_id)
 
          if safe_params
            ::Measure.create!(safe_params)
