@@ -1,10 +1,11 @@
 class BoardsController < ApplicationController
+  before_action :check_permissions, only: [:show, :edit, :update, :destroy]
   before_action :set_board, only: [:show, :edit, :update, :destroy]
 
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.all
+    @boards = current_user.boards
   end
 
   # GET /boards/1
@@ -24,7 +25,7 @@ class BoardsController < ApplicationController
   # POST /boards
   # POST /boards.json
   def create
-    @board = Board.new(board_params)
+    @board = Board.new(board_params.merge!(user: current_user))
 
     respond_to do |format|
       if @board.save
@@ -41,7 +42,7 @@ class BoardsController < ApplicationController
   # PATCH/PUT /boards/1.json
   def update
     respond_to do |format|
-      if @board.update(board_params)
+      if @board.update(board_params.merge!(user: current_user))
         format.html { redirect_to @board, notice: t('.notice2') }
         format.json { render :show, status: :ok, location: @board }
       else
@@ -70,5 +71,13 @@ class BoardsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def board_params
       params.require(:board).permit(:name, :description, :model, :location_id)
+    end
+
+    def check_permissions
+      board = Board.find(params[:id])
+
+      if !current_user.boards.include?(board)
+        redirect_to boards_path
+      end
     end
 end

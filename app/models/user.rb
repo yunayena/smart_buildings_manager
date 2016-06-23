@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_and_belongs_to_many :buildings
+
+  has_many :boards
+  has_many :locations
+  has_many :sensors
+  has_many :measures
 end
