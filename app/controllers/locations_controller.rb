@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
+    @location = Location.new(location_params.merge!(user: current_user))
 
     respond_to do |format|
       if @location.save
@@ -41,7 +41,7 @@ class LocationsController < ApplicationController
   # PATCH/PUT /locations/1.json
   def update
     respond_to do |format|
-      if @location.update(location_params)
+      if @location.update(location_params.merge!(user: current_user))
         format.html { redirect_to @location, notice:  t('.notice2')  }
         format.json { render :show, status: :ok, location: @location }
       else

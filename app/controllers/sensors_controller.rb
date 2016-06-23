@@ -25,7 +25,7 @@ class SensorsController < ApplicationController
   # POST /sensors
   # POST /sensors.json
   def create
-    @sensor = Sensor.new(sensor_params)
+    @sensor = Sensor.new(sensor_params.merge!(user: current_user))
 
     respond_to do |format|
       if @sensor.save

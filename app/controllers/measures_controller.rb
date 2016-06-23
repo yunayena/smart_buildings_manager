@@ -24,7 +24,7 @@ class MeasuresController < ApplicationController
   # POST /measures
   # POST /measures.json
   def create
-    @measure = Measure.new(measure_params)
+    @measure = Measure.new(measure_params.merge!(user: current_user))
 
     respond_to do |format|
       if @measure.save
@@ -41,7 +41,7 @@ class MeasuresController < ApplicationController
   # PATCH/PUT /measures/1.json
   def update
     respond_to do |format|
-      if @measure.update(measure_params)
+      if @measure.update(measure_params.merge!(user: current_user))
         format.html { redirect_to @measure, notice: t('.notice2') }
         format.json { render :show, status: :ok, location: @measure }
       else

@@ -25,7 +25,7 @@ class BuildingsController < ApplicationController
   # POST /buildings
   # POST /buildings.json
   def create
-    @building = Building.new(building_params)
+    @building = Building.new(building_params.merge!(user: current_user))
 
     respond_to do |format|
       if @building.save
@@ -42,7 +42,7 @@ class BuildingsController < ApplicationController
   # PATCH/PUT /buildings/1.json
   def update
     respond_to do |format|
-      if @building.update(building_params)
+      if @building.update(building_params.merge!(user: current_user))
         format.html { redirect_to @building, notice: t('.notice5') }
         format.json { render :show, status: :ok, location: @building }
       else
