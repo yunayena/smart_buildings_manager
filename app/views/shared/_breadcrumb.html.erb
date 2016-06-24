@@ -1,8 +1,9 @@
 <ol class="breadcrumb">
-  <li class="">
-    <a href="index.html"><%= t('.home') %></a>
-  </li>
-  <li class="active">
-    <a href="index.html"><%= t('.dashboard') %></a>
-  </li>
-</ol>
+    <li class="">
+        <%= content_tag 'a', href: root_path do %>
+        <%= content_tag 'i', '', class: "fa fa-home" %>
+        <%= content_tag 'span', t('.home') %>
+        <% end %>
+        <h1>
+
+    </ol>

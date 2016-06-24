@@ -8,13 +8,8 @@
   <div class="widget stay-on-collapse" id="widget-sidebar">
     <nav role="navigation" class="widget-body">
       <ul class="acc-menu">
-        <li class="nav-separator"><%= t('.MANAGE') %></li>
-
-        <li>
-          <%= content_tag 'a', href: root_path do %>
-            <%= content_tag 'i', '', class: "fa fa-home" %>
-            <%= content_tag 'span', t(".dashboard") %>
-          <% end %>
+        <li class="nav-separator"><%= t(".dashboard") %></li>
+        <li class="nav-separator">
         </li>
 
         <li>
@@ -76,7 +71,8 @@
         </li>
 
         <li class="nav-separator">Control</li>
-
+        <li class="nav-separator">
+        </li>
         <li class="hasChild"><a href="app-notes.html"><i class="fa fa-file-text-o"></i><%=t('.Informes') %></a>
         </li>
 

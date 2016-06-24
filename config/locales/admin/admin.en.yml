@@ -2,6 +2,9 @@ en:
   application:
     index:
       title: 'You welcome to your dashboard.'
+      change_locale_en: 'English'
+      change_locale_es: 'Español'
+      language: 'Language'
   layouts:
     application:
       SmartBuildingsManager: Smart Buildings Manager
@@ -11,6 +14,8 @@ en:
       dashboard: 'Dashboard'
 
     headerbar:
+      change_locale_en: "English"
+      change_locale_es: "Español"
       sbm: 'Smart Buildings Manager'
       profile: 'Profile'
       account: 'Account'

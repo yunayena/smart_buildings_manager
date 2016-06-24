@@ -1,69 +1,65 @@
-<div id="headerbar">
-
-</div>
+<div id="headerbar"></div>
 
 <header id="topnav" class="navbar navbar-midnightblue navbar-fixed-top clearfix" role="banner">
 
-  <span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
-    <a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar">
-      <span class="icon-bg">
-        <i class="fa fa-fw fa-bars"></i>
-      </span>
-    </a>
-  </span>
+    <span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
+        <a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar">
+            <span class="icon-bg">
+                <i class="fa fa-fw fa-bars"></i>
+            </span>
+        </a>
+    </span>
 
-  <a class="navbar-brand" href="#"><%= t('.sbm') %></a>
+    <a class="navbar-brand" href="#"><%= t('.sbm') %></a>
+    <ul class="nav navbar-nav toolbar pull-right">
 
-  <ul class="nav navbar-nav toolbar pull-right">
+        <li class="dropdown toolbar-icon-bg">
 
-    <li class="dropdown toolbar-icon-bg">
-      <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
-        <span class="icon-bg">
-          <i class="fa fa-fw fa-user"></i>
-        </span>
-      </a>
-      <ul class="dropdown-menu userinfo arrow">
-        <li>
-          <a href="#">
-            <span class="pull-left"><%= t('.profile') %></span>
-            <span class="badge badge-info">80%</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="pull-left"><%= t('.account') %></span>
-            <i class="pull-right fa fa-user"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="pull-left"><%= t('.settings') %></span>
-            <i class="pull-right fa fa-cog"></i>
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-          <a href="#">
-            <span class="pull-left"><%= t('.earnings') %></span>
-            <i class="pull-right fa fa-line-chart"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="pull-left"><%= t('.statement') %></span>
-            <i class="pull-right fa fa-list-alt"></i>
-          </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-          <a href="#">
-            <span class="pull-left"><% t('.sign_out') %></span>
-            <i class="pull-right fa fa-sign-out"></i>
-          </a>
-        </li>
-      </ul>
-    </li>
+            <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
+                <span class="icon-bg">
+                    <i class="fa fa-fw fa-user"></i>
+                </span>
+            </a>
+            <ul class="dropdown-menu userinfo arrow">
+                <li>
 
-  </ul>
+                    <%= content_tag 'a', class: "link-locale", href: root_path({ locale: :en }) do %>
+                    <%= content_tag 'i', '', class: "fa fa-language" %>
+                    <%= content_tag 'span', t('.change_locale_en') %>
+                    <% end %>
+
+                </li>
+
+                <li>
+                    <%= content_tag 'a', class: "link-locale", href: root_path({ locale: :es }) do %>
+                    <%= content_tag 'i', '', class: "fa fa-language" %>
+                    <%= content_tag 'span', t('.change_locale_es') %>
+                    <% end %>
+
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <span class="pull-left"><%= t('.account') %></span>
+                        <i class="pull-right fa fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="pull-left"><%= t('.settings') %></span>
+                        <i class="pull-right fa fa-cog"></i>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <span class="pull-left"><%= t('.sign_out') %></span>
+                        <i class="pull-right fa fa-sign-out"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
 
 </header>

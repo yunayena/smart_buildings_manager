@@ -2,13 +2,14 @@
     <div class="widget stay-on-collapse" id="widget-welcomebox">
         <div class="widget-body welcome-box tabular">
             <div class="tabular-row">
-                <div class="tabular-cell welcome-avatar">
-                  <%= link_to(image_tag('/avatar/avatar_02.png.jpeg', class: 'avatar'), root_path) %>
-                </div>
-                <div class="tabular-cell welcome-options">
-                    <span class="welcome-text"><%= t('.welcome') %></span>
-                    <a href="index.html" class="name"><%= "#{current_user.email}!" unless current_user.blank? %></a>
 
+                <div class="tabular-cell welcome-options">
+
+                    <%= content_tag 'a', class: "name", href: root_path do %>
+                    <%= content_tag 'i', '', class: "fa fa-user" %>
+                    <%= content_tag 'span', t('.welcome') %>
+                    <%= "#{current_user.email}!" unless current_user.blank? %>
+                    <% end %>
                 </div>
             </div>
         </div>

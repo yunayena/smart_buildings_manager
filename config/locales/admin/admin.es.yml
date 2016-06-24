@@ -2,6 +2,9 @@ es:
   application:
     index:
       title: 'Bienvenido a su panel de usuario.'
+      change_locale_en: 'English'
+      change_locale_es: 'Español'
+      language: 'Idioma'
   layouts:
     application:
       SmartBuildingsManager: 'Smart Buildings Manager'
@@ -10,6 +13,8 @@ es:
       home: 'Inicio'
       dashboard: 'Panel de control'
     headerbar:
+      change_locale_en: "English"
+      change_locale_es: "Español"
       sbm: 'Smart Buildings Manager'
       profile: 'Perfil'
       account: 'Cuenta'
