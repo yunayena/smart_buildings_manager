@@ -4,7 +4,7 @@ class SensorsController < ApplicationController
   # GET /sensors
   # GET /sensors.json
   def index
-    @sensors = Sensor.all
+    @sensors = current_user.sensors
   end
 
   # GET /sensors/1
@@ -42,7 +42,7 @@ class SensorsController < ApplicationController
   # PATCH/PUT /sensors/1.json
   def update
     respond_to do |format|
-      if @sensor.update(sensor_params)
+      if @sensor.update(sensor_params.merge!(user: current_user))
         format.html { redirect_to @sensor, notice: t('.notice2') }
         format.json { render :show, status: :ok, location: @sensor }
       else

@@ -4,7 +4,7 @@ class MeasuresController < ApplicationController
   # GET /measures
   # GET /measures.json
   def index
-    @measures = Measure.all
+    @measures = current_user.measures
   end
 
   # GET /measures/1

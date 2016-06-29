@@ -4,7 +4,7 @@ class BuildingsController < ApplicationController
   # GET /buildings
   # GET /buildings.json
   def index
-    @buildings = Building.all
+    @buildings = current_user.buildings
 #    @message = t('.message1')
   end
 
@@ -16,6 +16,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/new
   def new
     @building = Building.new
+
   end
 
   # GET /buildings/1/edit
@@ -25,7 +26,8 @@ class BuildingsController < ApplicationController
   # POST /buildings
   # POST /buildings.json
   def create
-    @building = Building.new(building_params.merge!(user: current_user))
+    @building = Building.new(building_params)
+    @building.users << current_user
 
     respond_to do |format|
       if @building.save
@@ -42,7 +44,8 @@ class BuildingsController < ApplicationController
   # PATCH/PUT /buildings/1.json
   def update
     respond_to do |format|
-      if @building.update(building_params.merge!(user: current_user))
+      if @building.update(building_params)
+        @building.users << current_user
         format.html { redirect_to @building, notice: t('.notice5') }
         format.json { render :show, status: :ok, location: @building }
       else

@@ -7350,16 +7350,16 @@ body.layout-boxed .infobar-wrapper {
   padding: 16px !important;
 }
 #topnav.navbar-default .navbar-brand {
-  background: url("/assets/logo.png") no-repeat -40px bottom;
+  background: url("/assets/logo.png") no-repeat left center;
 }
 #topnav .navbar-brand {
-  background: url("/assets/logo.png") no-repeat -40px top;
+  background: url("/assets/logo.png") no-repeat left center;
 }
 body.topnav-collapsed #topnav.navbar-default .navbar-brand {
-  background: url("/assets/logo.png") no-repeat -40px bottom;
+  background: url("/assets/logo.png") no-repeat left center;
 }
 body.topnav-collapsed #topnav .navbar-brand {
-  background: url("/assets/logo.png") no-repeat -40px top;
+  background: url("/assets/logo.png") no-repeat left center;
 }
 @media print {
   .static-sidebar-wrapper,
@@ -8081,6 +8081,10 @@ nav.navbar {
   float: right;
   position: absolute;
   right: 30px;
+}
+.sidebar nav.widget-body > ul.acc-menu .nav-separator:first-child {
+  margin-top: 0;
+  border-top: none;
 }
 @media (max-width: 992px) {
   #topnav .yamm .open .dropdown-menu {

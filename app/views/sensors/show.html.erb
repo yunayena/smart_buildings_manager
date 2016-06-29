@@ -20,11 +20,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                      <td> <%= @sensor.board.location.building.name %>
-                      </td>
-                      <td> <%= @sensor.board.location.name %>
-                      </td>
-                        <td> <%= @sensor.board.name %>
+                        <td>
+                            <%= @sensor.board.location.building.name %>
+                        </td>
+                        <td>
+                            <%= @sensor.board.location.name %>
+                        </td>
+                        <td>
+                            <%= @sensor.board.name %>
                         </td>
                         <td>
                             <%= @sensor.name %>
@@ -44,32 +47,32 @@
 
 <!--Grafica -->
 <% unless @sensor_measures.blank? %>
-  <div>
+<div>
     <div class="panel panel-default">
-      <div class="panel-heading">
-        Sensor Evolution
-      </div>
-      <div class="panel-body">
-        <div id="sensor-evolution" style="height: 250px;"></div>
-      </div>
+        <div class="panel-heading">
+            Sensor Evolution
+        </div>
+        <div class="panel-body">
+            <div id="sensor-evolution" style="height: 250px;"></div>
+        </div>
     </div>
-  </div>
+</div>
 
-  <% content_for(:extra_scripts) do %>
-    <script type="text/javascript">
-      $(document).ready(function (){
+<% content_for(:extra_scripts) do %>
+<script type="text/javascript">
+    $(document).ready(function () {
         new Morris.Area({
-          element: 'sensor-evolution',
-          data: <%= raw @sensor_measures.to_json %>,
-          xkey: 'time',
-          ykeys: ['value'],
-          labels: ['Value'],
-          pointSize: 2,
-          resize: true
+            element: 'sensor-evolution',
+            data: <%= raw @sensor_measures.to_json %>,
+            xkey: 'time',
+            ykeys: ['value'],
+            labels: ['Value'],
+            pointSize: 2,
+            resize: true
         });
-      });
-    </script>
-  <% end %>
+    });
+</script>
+<% end %>
 <% end %>
 <!--PIE-->
 
