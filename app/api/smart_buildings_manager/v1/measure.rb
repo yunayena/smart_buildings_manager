@@ -10,11 +10,27 @@ module SmartBuildingsManager
             }
           end
 
-          params :attributes do
-            optional :attributes, type: Hash, default: {},
+          params :value do
+            optional :value, type: Integer, default: nil,
             documentation: {
-              type: 'Hash',
-              desc: 'Params attributes of measure'
+              type: 'Integer',
+              desc: 'Value of measure'
+            }
+          end
+
+          params :sensor_id do
+            optional :sensor_id, type: Integer, default: nil,
+            documentation: {
+              type: 'Integer',
+              desc: 'Sensor ID of measure'
+            }
+          end
+
+          params :metric do
+            optional :metric, type: Integer, default: nil,
+            documentation: {
+              type: 'Integer',
+              desc: 'Metric of measure'
             }
           end
         end
@@ -25,16 +41,14 @@ module SmartBuildingsManager
        params do
         use :token, type: String, desc: 'Authentication token'
         requires :id, type: Integer, desc: "Measure ID"
-        requires :attributes, type: Hash, desc: 'Measure object to create' do
-          requires :value, type: String, desc: 'Value of measure'
-          requires :metric, type: String, desc: 'Metric of measure'
-          requires :sensor_id, type: String, desc: 'Sensor of measure'
-        end
+        requires :value, type: String, desc: 'Value of measure'
+        requires :metric, type: String, desc: 'Metric of measure'
+        requires :sensor_id, type: String, desc: 'Sensor of measure'
       end
       put do
         begin
           authenticate!
-          safe_params = clean_params(params[:attributes]).permit(:value, :metric, :sensor_id)
+          safe_params = clean_params(params).permit(:value, :metric, :sensor_id)
 
           if safe_params
             measure = ::Measure.find(params[:id])
@@ -65,16 +79,14 @@ module SmartBuildingsManager
      # Post
      params do
        use :token
-       requires :attributes, type: Hash, desc: 'Measure object to create' do
-         requires :value, type: String, desc: 'Value of measure'
-         requires :metric, type: String, desc: 'Metric of measure'
-         requires :sensor_id, type: String, desc: 'Sensor of measure'
-       end
+       requires :value, type: String, desc: 'Value of measure'
+       requires :metric, type: String, desc: 'Metric of measure'
+       requires :sensor_id, type: String, desc: 'Sensor of measure'
      end
      post do
        begin
          authenticate!
-         safe_params = clean_params(params[:attributes])
+         safe_params = clean_params(params)
                        .permit(:value, :metric, :sensor_id)
 
          if safe_params
