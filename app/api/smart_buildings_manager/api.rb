@@ -1,7 +1,6 @@
 module SmartBuildingsManager
   class API < Grape::API
     version 'v1', using: :header, vendor: 'smart_buildings_manager'
-    format :json
     prefix :api
 
     before do
