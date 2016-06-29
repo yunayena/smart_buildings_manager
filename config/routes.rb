@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :locations
   resources :buildings
 
-  devise_for :users,  path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :users
 
   get 'set_locale', to: 'application#set_locale'
   root 'application#index'

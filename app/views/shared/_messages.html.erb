@@ -1,0 +1,9 @@
+<% unless flash.blank? %>
+  <% flash.keys.each do |key| %>
+    <% unless flash[key].blank? %>
+      <div class="">
+        <%= flash[key] %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
