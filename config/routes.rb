@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :locations
   resources :buildings
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
   get 'set_locale', to: 'application#set_locale'
   root 'application#index'
