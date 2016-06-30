@@ -44,12 +44,6 @@
                         <i class="pull-right fa fa-user"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="pull-left"><%= t('.settings') %></span>
-                        <i class="pull-right fa fa-cog"></i>
-                    </a>
-                </li>
                 <li class="divider"></li>
                 <li><%= link_to(raw("<span class='pull-left'>#{t('.sign_out')}</span>" +
                                 "<i class='pull-right fa fa-sign-out'></i>"), destroy_user_session_path, method: :delete) %>

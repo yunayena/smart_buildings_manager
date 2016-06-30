@@ -2981,6 +2981,7 @@ fieldset[disabled] .btn.btn-social.btn-windows-alt.active {
   border-style: solid;
   padding: 24px;
   margin-bottom: 24px;
+  margin-top: 24px;
 }
 .alert > h1,
 .alert > h2,
