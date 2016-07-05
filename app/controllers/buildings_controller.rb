@@ -28,7 +28,6 @@ class BuildingsController < ApplicationController
   # POST /buildings.json
   def create
     @building = Building.new(building_params)
-    @building.users << current_user
 
     respond_to do |format|
       if @building.save
@@ -45,8 +44,8 @@ class BuildingsController < ApplicationController
   # PATCH/PUT /buildings/1.json
   def update
     respond_to do |format|
+      Rails.logger.info "___ #{building_params}"
       if @building.update(building_params)
-        @building.users << current_user
         format.html { redirect_to @building, notice: t('.notice5') }
         format.json { render :show, status: :ok, location: @building }
       else
@@ -74,7 +73,7 @@ class BuildingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def building_params
-      params.require(:building).permit(:name, :description, :address, :postal_code, :phone)
+      params.require(:building).permit(:name, :description, :address, :postal_code, :phone, user_ids: [])
     end
 
     def check_permissions
