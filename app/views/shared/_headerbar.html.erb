@@ -10,7 +10,7 @@
         </a>
     </span>
 
-    <a class="navbar-brand" href="#"><%= t('.sbm') %></a>
+    <%= link_to t('.sbm'), root_path(), class: 'navbar-brand' %>
     <ul class="nav navbar-nav toolbar pull-right">
 
         <li class="dropdown toolbar-icon-bg">
@@ -22,27 +22,24 @@
             </a>
             <ul class="dropdown-menu userinfo arrow">
                 <li>
-
-                    <%= content_tag 'a', class: "link-locale", href: root_path({ locale: :en }) do %>
+                  <%= content_tag 'a', class: "link-locale", href: set_locale_path({ locale: :en }) do %>
                     <%= content_tag 'i', '', class: "fa fa-language" %>
                     <%= content_tag 'span', t('.change_locale_en') %>
-                    <% end %>
-
+                  <% end %>
                 </li>
 
                 <li>
-                    <%= content_tag 'a', class: "link-locale", href: root_path({ locale: :es }) do %>
+                  <%= content_tag 'a', class: "link-locale", href: set_locale_path({ locale: :es }) do %>
                     <%= content_tag 'i', '', class: "fa fa-language" %>
                     <%= content_tag 'span', t('.change_locale_es') %>
-                    <% end %>
-
+                  <% end %>
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#">
-                        <span class="pull-left"><%= t('.account') %></span>
-                        <i class="pull-right fa fa-user"></i>
-                    </a>
+                  <%= content_tag 'a', href: user_path(current_user) do %>
+                    <span class="pull-left"><%= t('.account') %></span>
+                    <i class="pull-right fa fa-user"></i>
+                  <% end %>
                 </li>
                 <li class="divider"></li>
                 <li><%= link_to(raw("<span class='pull-left'>#{t('.sign_out')}</span>" +

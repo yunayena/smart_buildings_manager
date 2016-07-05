@@ -1,0 +1,42 @@
+<div class="panel panel-default" id="panel-inline">
+
+    <div class="panel-heading">
+			<%= t('.listing_users') %></h2>
+			<div class="panel-ctrls"></div>
+	</div>
+
+	<div class="panel-body panel-no-padding">
+
+			<table class="datatables" id="editable">
+
+					<thead>
+						      <tr role="row">
+											<th><%= t('.name') %></th>
+											<th><%=t('.description') %></th>
+											<th><%= t('.admin') %></th>
+											<th><%= t('.Actions') %> </th>
+									</tr>
+					</thead>
+
+          <tbody>
+						<% @users.each_with_index do |user, index| %>
+						<tr role="row" class="<%= index%2==0 ? 'odd' : 'even' %>">
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.admin ? "Administrador" : "Usuario"  %></td>
+                <td>
+								<%= link_to t('.show'), user, :class => "btn btn-inverse-alt" %>
+                <%= link_to t('.edit'), edit_user_path(user), :class => "btn btn-warning-alt" %>
+                <%= link_to t('.destroy'), user, method: :delete,  :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
+							  </td>
+            </tr>
+            <% end %>
+					</tbody>
+				</table>
+				<!--end table-->
+        <div class="panel-footer"></div>
+
+    </div>
+
+</div>
+<%= link_to t('.new_user'), new_user_path, :class=>"btn btn-inverse"%>

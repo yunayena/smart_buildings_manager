@@ -1,4 +1,5 @@
 class SensorsController < ApplicationController
+  before_action :check_permissions, only: [:show, :edit, :update, :destroy]
   before_action :set_sensor, only: [:show, :edit, :update, :destroy]
 
   # GET /sensors
@@ -86,5 +87,13 @@ class SensorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
       params.require(:sensor).permit(:name, :description, :kind, :board_id)
+    end
+
+    def check_permissions
+      sensor = Sensor.find(params[:id])
+
+      if !current_user.sensors.include?(sensor)
+        redirect_to sensors_path
+      end
     end
 end

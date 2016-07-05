@@ -1,15 +1,14 @@
 es:
-  boards:
+  users:
     form:
-      select_a_location: 'Seleccionar localización'
-      formulario_controlador: 'Formulario controlador'
+      formulario_usuario: 'Formulario usuario'
     edit:
-      editing_board: 'Editar Controlador'
+      editing_user: 'Editar Controlador'
       show: 'Mostrar'
       back: 'Atrás'
     index:
       Actions: 'Acciones'
-      listing_boards: 'Lista de Controladores'
+      listing_users: 'Lista de Controladores'
       name: 'Nombre'
       description: 'Descripción'
       model: 'Modelo'
@@ -17,14 +16,14 @@ es:
       edit: 'Editar'
       destroy: 'Eliminar'
       are_you_sure: '¿Está usted seguro?'
-      new_board: 'Nuevo controlador'
+      new_user: 'Nuevo usuario'
     new:
-      new_board: 'Nuevo controlador'
+      new_user: 'Nuevo usuario'
       form: 'Formulario'
       back: 'Atrás'
     show:
       notice: 'Ficha'
-      informacion_controlador: 'Información controlador'
+      informacion_usuario: 'Información usuario'
       name: 'Nombre'
       description: 'Descripción'
       edit: 'Editar'
@@ -33,10 +32,8 @@ es:
       model: 'Modelo'
   activerecord:
     models:
-      board: 'Controlador'
+      user: 'Controlador'
     attributes:
-      board:
+      user:
         name: 'Nombre'
-        description: 'Descripción'
-        model: 'Modelo'
-        location_id: 'Localización'
+        admin: 'Administrador'

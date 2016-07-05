@@ -9,7 +9,7 @@
     <meta name="description" content="SmartBuildingsManager">
     <meta name="author" content="Patricia Campal">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <link href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet' type='text/css'>
@@ -53,7 +53,7 @@
 
     </div>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application' %>
     <% if content_for?(:extra_scripts) %>
       <%= yield :extra_scripts %>
     <% end %>

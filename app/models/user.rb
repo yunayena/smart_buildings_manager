@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   has_many :locations
   has_many :sensors
   has_many :measures
+
+  def is_admin?
+    admin
+  end
 end

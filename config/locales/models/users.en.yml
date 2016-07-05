@@ -1,0 +1,39 @@
+en:
+  users:
+    form:
+      formulario_controlador: 'Form user'
+    edit:
+      editing_user: 'Editing user'
+      show: 'Show'
+      back: 'Back'
+    index:
+      Actions: 'Actions'
+      listing_users: 'Listing users'
+      name: 'Name'
+      description: 'Description'
+      model: 'Model'
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      are_you_sure: 'Are you sure?'
+      new_user: 'New user'
+    new:
+      new_user: 'New user'
+      form: 'Form'
+      back: 'Back'
+    show:
+      notice: 'Notice'
+      informacion_controlador: 'Information user'
+      name: 'Name'
+      description: 'Description'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      back: 'Back'
+      model: 'Model'
+  activerecord:
+    models:
+      user: 'Board'
+    attributes:
+      user:
+        name: 'Name'
+        admin: 'Administrator'

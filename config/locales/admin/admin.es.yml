@@ -17,7 +17,7 @@ es:
       change_locale_es: "Español"
       sbm: 'Smart Buildings Manager'
       profile: 'Perfil'
-      account: 'Cuenta'
+      account: 'Mi cuenta'
       settings: 'Ajustes'
       earnings: 'Gráficas'
       statement: 'Resumen'
@@ -28,7 +28,7 @@ es:
       buildings: "Edificios"
       MANAGE: "MANAGE"
       locations: "Localizaciones"
-      boards: 'controladores'
+      boards: 'Controladores'
       sensors: 'Sensores'
       dashboard: "Panel de control"
       create_new_building: "Crear nuevo edificio"
@@ -36,7 +36,7 @@ es:
       create_new_location: "Crear nueva localización"
       manage_locations: "Administrar localizaciones"
       create_new_board: "Crear nuevo controlador"
-      manage_boards: "Administrar controladores"
+      manage_boards: "Administrar Controladores"
       create_new_sensor: "Crear nuevo sensor"
       manage_sensors: "Administrar sensores"
       Graficas: "Gráficas"

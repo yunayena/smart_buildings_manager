@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h2><%=t('.informacion_controlador')%></h2>
+	</div>
+	<div class="panel-body panel-no-padding">
+
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+
+					<th><%= t('.name') %></th>
+					<th><%=t('.email') %></th>
+					<th><%=t('.admin') %></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><%= @user.name %></td>
+						<td><%= @user.email %></td>
+						<td><%= @user.admin ? "Administrador" : "Usuario" %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div>
+<%= link_to t('.destroy'), @user, method: :delete, :class => "btn btn-danger-alt" %>
+
+<%= link_to t('.edit'), edit_user_path(@user), :class => "btn btn-warning-alt" %>
+
+<%= link_to t('.back'), users_path, :class => "btn btn-inverse-alt" %>
+</div>

@@ -1,4 +1,5 @@
 class MeasuresController < ApplicationController
+  before_action :check_permissions, only: [:show, :edit, :update, :destroy]
   before_action :set_measure, only: [:show, :edit, :update, :destroy]
 
   # GET /measures
@@ -70,5 +71,13 @@ class MeasuresController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def measure_params
       params.require(:measure).permit(:value, :metric)
+    end
+
+    def check_permissions
+      measure = Measure.find(params[:id])
+
+      if !current_user.measures.include?(measure)
+        redirect_to measures_path
+      end
     end
 end

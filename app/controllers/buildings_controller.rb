@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+  before_action :check_permissions, only: [:show, :edit, :update, :destroy]
   before_action :set_building, only: [:show, :edit, :update, :destroy]
 
   # GET /buildings
@@ -74,5 +75,13 @@ class BuildingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def building_params
       params.require(:building).permit(:name, :description, :address, :postal_code, :phone)
+    end
+
+    def check_permissions
+      building = Building.find(params[:id])
+
+      if !current_user.buildings.include?(building)
+        redirect_to buildings_path
+      end
     end
 end

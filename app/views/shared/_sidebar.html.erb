@@ -68,6 +68,23 @@
         </li>
         <li class="nav-separator">
         </li>
+        <% if current_user.is_admin? %>
+          <li>
+            <a href="javascript:;">
+              <i class="fa fa-dot-circle-o"></i>
+              <span><%= t('.users') %></span>
+            </a>
+            <ul class="acc-menu">
+              <li>
+                <%= link_to t('.create_new_user'), new_user_path() %>
+              </li>
+              <li>
+              <%= link_to t('.manage_users'), users_path() %>
+              </li>
+
+            </ul>
+          </li>
+        <% end %>
 
       </ul>
      </nav>
