@@ -74,10 +74,10 @@ class LocationsController < ApplicationController
     end
 
     def check_permissions
-      locartion = Location.find(params[:id])
+      location = Location.find(params[:id])
 
-      if !current_user.locartions.include?(locartion)
-        redirect_to locartions_path
+      if !current_user.locations.include?(location)
+        redirect_to locations_path
       end
     end
 end

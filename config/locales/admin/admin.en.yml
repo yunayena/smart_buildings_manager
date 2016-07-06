@@ -5,6 +5,10 @@ en:
       change_locale_en: 'English'
       change_locale_es: 'Español'
       language: 'Language'
+      sus_edificios: "Your buildings"
+      sus_localizaciones: "Your locations"
+      sus_sensores: "Your sensors"
+      sus_controladores: "Your boards"
   layouts:
     application:
       SmartBuildingsManager: Smart Buildings Manager
@@ -43,5 +47,8 @@ en:
       Graficas: "Graphics"
       Avisos_y_alarmas: "Warnings and alarms"
       Informes: "Reports"
+      users: "Users"
+      create_new_user: "Create new user"
+      manage_users: "Manage users"
     welcome:
       welcome: "Welcome"
