@@ -1,31 +1,31 @@
 <div class="ui-sortable">
 
-<div class="panel panel-default wijets-full-screen">
+	<div class="panel panel-default wijets-full-screen">
 
-	<div class="panel-heading">
-		<h2><%=t('.formulario_controlador') %></h2>
-		<div class="panel-ctrls">
-			<span class="button-icon has-bg">
-				<i class="fa fa-minus"></i>
-			</span>
+		<div class="panel-heading">
+			<h2><%= t('.formulario_usuario') %></h2>
+			<div class="panel-ctrls">
+				<span class="button-icon has-bg">
+					<i class="fa fa-minus"></i>
+				</span>
+			</div>
 		</div>
-	</div>
 
-	<div class="panel-editbox" data-widget-controls=""></div>
+		<div class="panel-editbox" data-widget-controls=""></div>
 
-	<div class="panel-body">
-		<%= form_for(@user, html: { class: 'form-horizontal row-border' }) do |f| %>
+		<div class="panel-body">
+			<%= form_for(@user, html: { class: 'form-horizontal row-border' }) do |f| %>
 
 			<% if @user.errors.any? %>
-				<div id="error_explanation">
-					<h2><%= pluralize(@user.errors.count, "error") %>
-						prohibited this user from being saved:</h2>
-					<ul>
-						<% @user.errors.full_messages.each do |message| %>
-						<li><%= message %></li>
-						<% end %>
-					</ul>
-				</div>
+			<div id="error_explanation">
+				<h2><%= pluralize(@user.errors.count, "error") %>
+					prohibited this user from being saved:</h2>
+				<ul>
+					<% @user.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
 			<% end %>
 
 			<div class="form-group">
@@ -43,24 +43,24 @@
 			</div>
 
 			<% if current_user.is_admin? %>
-				<div class="form-group">
-					<%= f.label :admin, class: 'col-sm-2 control-label' %>
-					<div class="col-sm-8">
-						<%= f.select :admin, options_for_select([["Si",true], ["No", false]], selected: @user.admin),
+			<div class="form-group">
+				<%= f.label :admin, class: 'col-sm-2 control-label' %>
+				<div class="col-sm-8">
+					<%= f.select :admin, options_for_select([["Si",true], ["No", false]], selected: @user.admin),
 									class: 'form-control tooltips', include_blank: t('.select_an_option') %>
-					</div>
 				</div>
+			</div>
 			<% end %>
 
 			<div class="form-group">
-				<%= f.label :password, class: 'col-sm-2 control-label' %>
+				<%= f.label t('.password'), class: 'col-sm-2 control-label' %>
 				<div class="col-sm-8">
 					<%= f.password_field :password, class: 'form-control tooltips' %>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<%= f.label :password_confirmation, class: 'col-sm-2 control-label' %>
+				<%= f.label t('.password_confirmation'), class: 'col-sm-2 control-label' %>
 				<div class="col-sm-8">
 					<%= f.password_field :password_confirmation, class: 'form-control tooltips' %>
 				</div>
@@ -69,16 +69,15 @@
 			<div class="panel-footer">
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
-						<%= f.submit 'Enviar', class: 'btn-primary btn' %>
-						<%= link_to 'Cancelar', users_path(), class: 'btn-default btn' %>
+						<%= f.submit t('.enviar'), class: 'btn-primary btn' %>
+						<%= link_to t('.cancelar'), users_path(), class: 'btn-default btn' %>
 					</div>
 				</div>
 			</div>
 
-		<% end %>
+			<% end %>
+		</div>
+
 	</div>
-
-</div>
-
 
 </div>

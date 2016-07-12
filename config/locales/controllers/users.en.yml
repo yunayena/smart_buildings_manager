@@ -1,0 +1,10 @@
+en:
+  sensors:
+    index:
+      message: 'List of users.'
+    create:
+      notice: 'User was successfully created.'
+    update:
+      notice2: 'User was successfully updated.'
+    destroy:
+      notice3: 'User was successfully destroyed.'

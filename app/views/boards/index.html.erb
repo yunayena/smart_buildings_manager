@@ -1,7 +1,7 @@
 <div class="panel panel-default" id="panel-inline">
 
     <div class="panel-heading">
-			<%= t('.listing_boards') %></h2>
+		<h2>	<%= t('.listing_boards') %></h2>
 			<div class="panel-ctrls"></div>
 	</div>
 
@@ -24,19 +24,18 @@
                 <td><%= board.name %></td>
                 <td><%= board.description %></td>
                 <td><%= board.model %></td>
+
                 <td>
 								<%= link_to t('.show'), board, :class => "btn btn-inverse-alt" %>
                 <%= link_to t('.edit'), edit_board_path(board), :class => "btn btn-warning-alt" %>
                 <%= link_to t('.destroy'), board, method: :delete,  :class => "btn btn-danger-alt", data: { confirm: t('.are_you_sure') } %>
-							  </td>
+                </td>
             </tr>
             <% end %>
 					</tbody>
 				</table>
 				<!--end table-->
         <div class="panel-footer"></div>
-
     </div>
-
 </div>
 <%= link_to t('.new_board'), new_board_path, :class=>"btn btn-inverse"%>

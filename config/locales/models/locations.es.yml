@@ -23,9 +23,10 @@ es:
     show:
       notice: 'Ficha'
       name: 'Nombre'
-      description: 'Descripcion'
+      description: 'Descripción'
       edit: 'Editar'
-      Back: 'Atrás'
+      back: 'Atrás'
+      destroy: 'Eliminar'
   activerecord:
     models:
       location: 'Location'

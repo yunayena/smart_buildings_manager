@@ -1,0 +1,10 @@
+es:
+  sensors:
+    index:
+      message: 'Usuario'
+    create:
+      notice: 'El usuario se ha creado correctamente.'
+    update:
+      notice2: 'El usuario se ha editado correctamente'
+    destroy:
+      notice3: 'El usuario se ha eliminado correctamente'

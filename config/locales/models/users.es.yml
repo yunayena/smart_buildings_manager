@@ -2,13 +2,18 @@ es:
   users:
     form:
       formulario_usuario: 'Formulario usuario'
+      cancelar: 'Cancelar'
+      enviar: 'Enviar'
+      password: 'Contraseña'
+      password_confirmation: 'Confirmar contraseña'
+
     edit:
-      editing_user: 'Editar Controlador'
+      editing_user: 'Editar usuario'
       show: 'Mostrar'
       back: 'Atrás'
     index:
       Actions: 'Acciones'
-      listing_users: 'Lista de Controladores'
+      listing_users: 'Lista de Usuarios'
       name: 'Nombre'
       description: 'Descripción'
       model: 'Modelo'
@@ -32,7 +37,7 @@ es:
       model: 'Modelo'
   activerecord:
     models:
-      user: 'Controlador'
+      user: 'Usuario'
     attributes:
       user:
         name: 'Nombre'

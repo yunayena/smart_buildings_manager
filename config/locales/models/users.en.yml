@@ -1,7 +1,12 @@
 en:
   users:
     form:
-      formulario_controlador: 'Form user'
+      formulario_usuario: 'Form user'
+      cancelar: 'Cancel'
+      password: 'Password'
+      password_confirmation: 'Password confirmation'
+      enviar: 'Send'
+
     edit:
       editing_user: 'Editing user'
       show: 'Show'
@@ -32,7 +37,7 @@ en:
       model: 'Model'
   activerecord:
     models:
-      user: 'Board'
+      user: 'User'
     attributes:
       user:
         name: 'Name'
