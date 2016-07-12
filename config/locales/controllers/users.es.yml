@@ -1,5 +1,5 @@
 es:
-  sensors:
+  users:
     index:
       message: 'Usuario'
     create:

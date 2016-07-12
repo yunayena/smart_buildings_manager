@@ -1,5 +1,5 @@
 en:
-  sensors:
+  users:
     index:
       message: 'List of users.'
     create:
