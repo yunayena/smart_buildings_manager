@@ -40,6 +40,8 @@ gem 'devise'
 
 gem 'grape'
 #his gem disables the security feature of strong_params at the model layer
+#validar emails
+gem 'validates_email_format_of'
 gem 'hashie-forbidden_attributes'
 
 group :development, :test do

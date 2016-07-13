@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :sensors
   has_many :measures
 
+validates :email, email_format: { message: "Doesn't look like an email address" }
+
   def is_admin?
     admin
   end
