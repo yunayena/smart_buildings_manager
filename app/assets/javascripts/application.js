@@ -47,4 +47,7 @@
 //= require plugins/form-daterangepicker/daterangepicker
 
 $(document).ready(function() {
+  $("#period").on("change", function() {
+    $(this).parent("form").submit();
+  });
 });

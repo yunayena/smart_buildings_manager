@@ -51,6 +51,15 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             Sensor Evolution
+            <%= form_tag sensors_details_path(), remote: true do %>
+              <input type="hidden" name="id" id="id" value="<%= @sensor.id%>" />
+              <select class="period" id="period" name="period">
+                <option value="">Selecciona un periodo</option>
+                <option value="1">Un día</option>
+                <option value="7">Una semana</option>
+                <option value="30">Un mes</option>
+              </select>
+          <% end %>
         </div>
         <div class="panel-body">
             <div id="sensor-evolution" style="height: 250px;"></div>

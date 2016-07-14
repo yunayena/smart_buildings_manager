@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :buildings
   resources :users
 
+  post 'sensor_details', to: 'sensors#details', as: :sensors_details
   get 'set_locale', to: 'application#set_locale'
   root 'application#index'
 

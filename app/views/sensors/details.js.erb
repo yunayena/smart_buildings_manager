@@ -1,0 +1,11 @@
+console.log('<%= @sensor_measures.to_json %>');
+$("#sensor-evolution").html('');
+new Morris.Area({
+    element: 'sensor-evolution',
+    data: <%= raw @sensor_measures.to_json %>,
+    xkey: 'time',
+    ykeys: ['value'],
+    labels: ['Value'],
+    pointSize: 2,
+    resize: true
+});

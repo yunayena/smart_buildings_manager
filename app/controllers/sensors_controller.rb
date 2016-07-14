@@ -63,6 +63,11 @@ class SensorsController < ApplicationController
     end
   end
 
+  def details
+    sensor = Sensor.find(params[:id])
+    @sensor_measures = sensor.measures.where('measures.created_at >= ?', eval(params[:period]).day.ago).order('created_at desc').limit(10).map{|m| { time: m.created_at, value: m.value } }
+  end
+
   def test_pdf
     # ...
     # Aqui va el código de donde sacas todos los datos del sensor
