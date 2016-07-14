@@ -2755,7 +2755,6 @@ fieldset[disabled] .btn.btn-social.btn-windows-alt.active {
   line-height: 1;
 }
 .caret:before {
-  content: "\f107";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
