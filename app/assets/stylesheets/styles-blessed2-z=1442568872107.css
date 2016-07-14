@@ -7350,16 +7350,16 @@ body.layout-boxed .infobar-wrapper {
   padding: 16px !important;
 }
 #topnav.navbar-default .navbar-brand {
-  background: url("https://www.dropbox.com/s/naq6f1vxlssube2/logo.png") no-repeat left center;
+  background: url("https://dl.dropboxusercontent.com/u/17948653/smb.png") no-repeat left center;
 }
 #topnav .navbar-brand {
-  background: url("https://www.dropbox.com/s/naq6f1vxlssube2/logo.png") no-repeat left center;
+  background: url("https://dl.dropboxusercontent.com/u/17948653/smb.png") no-repeat left center;
 }
 body.topnav-collapsed #topnav.navbar-default .navbar-brand {
-  background: url("https://www.dropbox.com/s/naq6f1vxlssube2/logo.png") no-repeat left center;
+  background: url("https://dl.dropboxusercontent.com/u/17948653/smb.png") no-repeat left center;
 }
 body.topnav-collapsed #topnav .navbar-brand {
-  background: url("https://www.dropbox.com/s/naq6f1vxlssube2/logo.png") no-repeat left center;
+  background: url("https://dl.dropboxusercontent.com/u/17948653/smb.png") no-repeat left center;
 }
 @media print {
   .static-sidebar-wrapper,
