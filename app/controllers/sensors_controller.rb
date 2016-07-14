@@ -65,7 +65,7 @@ class SensorsController < ApplicationController
 
   def details
     sensor = Sensor.find(params[:id])
-    @sensor_measures = sensor.measures.where('measures.created_at >= ?', eval(params[:period]).day.ago).order('created_at desc').limit(10).map{|m| { time: m.created_at, value: m.value } }
+    @sensor_measures = sensor.measures.where('measures.created_at >= ?', eval(params[:period]).day.ago).order('created_at asc').limit(20).map{|m| { time: m.created_at, value: m.value } }
   end
 
   def test_pdf
