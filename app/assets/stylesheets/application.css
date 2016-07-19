@@ -16,6 +16,6 @@
  *= require_self
  */
 
-#topnav .toolbar .dropdown-menu.userinfoF
+#topnav .toolbar .dropdown-menu.userinfo {
   float: left;
 }
