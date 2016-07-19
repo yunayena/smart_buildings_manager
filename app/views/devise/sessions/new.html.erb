@@ -37,7 +37,6 @@
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <%= link_to t('.forgot_password'),new_password_path(resource_name), class: 'pull-left' %>
                                 <% if devise_mapping.rememberable? -%>
                                 <div class='pull-right'>
                                     <%= f.check_box :remember_me %>
