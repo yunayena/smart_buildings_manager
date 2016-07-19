@@ -50,7 +50,7 @@
 <div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            Sensor Evolution
+            <%= t('.sensor_evolution') %>
             <%= form_tag sensors_details_path(), remote: true do %>
               <input type="hidden" name="id" id="id" value="<%= @sensor.id%>" />
               <select class="period" id="period" name="period">

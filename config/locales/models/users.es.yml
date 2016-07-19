@@ -35,6 +35,7 @@ es:
       destroy: 'Eliminar'
       back: 'Atrás'
       model: 'Modelo'
+      sensor_evolution: "Evolución del sensor"
   activerecord:
     models:
       user: 'Usuario'
@@ -42,3 +43,13 @@ es:
       user:
         name: 'Nombre'
         admin: 'Administrador'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: ': Este email ya está registrado.'
+            password_confirmation:
+              confirmation: ': No se ha confirmado contraseña.'
+            password:
+              blank: ": Contraseña en blanco."

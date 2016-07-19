@@ -35,6 +35,7 @@ en:
       destroy: 'Destroy'
       back: 'Back'
       model: 'Model'
+      sensor_evolution: "Sensor evolution"
   activerecord:
     models:
       user: 'User'
@@ -42,3 +43,13 @@ en:
       user:
         name: 'Name'
         admin: 'Administrator'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 'piruli rojo'
+            password_confirmation:
+              confirmation: 'whatevers x  '
+            password:
+              blank: "Password blank."
