@@ -29,7 +29,7 @@
 	<div class="form-group">
 		<%= f.label :board_id, class: 'col-sm-2 control-label' %>
 		<div class="col-sm-8">
-			<%= f.select :board_id, options_from_collection_for_select(Board.all, :id, :name, @sensor.board_id),
+			<%= f.select :board_id, options_from_collection_for_select(current_user.boards.all, :id, :name, @sensor.board_id),
 						class: 'form-control tooltips', include_blank: t('.select_a_board') %>
 		</div>
 	</div>
