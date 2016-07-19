@@ -68,21 +68,6 @@ class SensorsController < ApplicationController
     @sensor_measures = sensor.measures.where('measures.created_at >= ?', eval(params[:period]).day.ago).order('created_at asc').limit(20).map{|m| { time: m.created_at, value: m.value } }
   end
 
-  def test_pdf
-    # ...
-    # Aqui va el código de donde sacas todos los datos del sensor
-    # ...
-    @data_ids = Sensor.all.map(&:id)
-    @data_measures = Sensor.all.map(&:measures)
-    @data_names = Sensor.all.map(&:name)
-
-    respond_to do |format|
-      format.pdf do
-        render pdf: "nombre_del_fichero", layout: 'pdf'
-      end
-    end
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sensor
