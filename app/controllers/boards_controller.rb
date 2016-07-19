@@ -5,7 +5,7 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = current_user.is_admin? ? Board.all : current_user.boards
+    @boards = current_user.is_admin? ? Board.all : Board.joins(:user).where(user: current_user)
   end
 
   # GET /boards/1
@@ -76,7 +76,7 @@ class BoardsController < ApplicationController
     def check_permissions
       board = Board.find(params[:id])
 
-      if !current_user.boards.include?(board)
+      if !current_user.admin? && !current_user.buildings.map(&:locations).map(&:boards).uniq.include?(board)
         redirect_to boards_path
       end
     end

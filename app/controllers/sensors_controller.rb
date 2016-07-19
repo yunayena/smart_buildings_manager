@@ -5,7 +5,7 @@ class SensorsController < ApplicationController
   # GET /sensors
   # GET /sensors.json
   def index
-    @sensors = current_user.sensors
+    @sensors = current_user.is_admin? ? Sensor.all : Sensor.includes(:user).where(user: current_user)
   end
 
   # GET /sensors/1
@@ -97,7 +97,7 @@ class SensorsController < ApplicationController
     def check_permissions
       sensor = Sensor.find(params[:id])
 
-      if !current_user.sensors.include?(sensor)
+      if !current_user.admin? && !current_user.buildings.map(&:locations).map(&:boards).map(&:sensors).uniq.include?(sensor)
         redirect_to sensors_path
       end
     end

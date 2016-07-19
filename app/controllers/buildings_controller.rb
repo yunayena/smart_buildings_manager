@@ -5,8 +5,7 @@ class BuildingsController < ApplicationController
   # GET /buildings
   # GET /buildings.json
   def index
-    @buildings = current_user.buildings
-#    @message = t('.message1')
+    @buildings = current_user.is_admin? ? Building.all : current_user.buildings
   end
 
   # GET /buildings/1
@@ -84,7 +83,7 @@ class BuildingsController < ApplicationController
     def check_permissions
       building = Building.find(params[:id])
 
-      if !current_user.buildings.include?(building)
+      if !current_user.admin? && !current_user.buildings.include?(building)
         redirect_to buildings_path
       end
     end

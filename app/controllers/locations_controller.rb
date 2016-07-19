@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = current_user.locations
+    @locations = current_user.is_admin? ? Location.all : Location.joins(:user).where(user: current_user)
   end
 
   # GET /locations/1
@@ -76,7 +76,7 @@ class LocationsController < ApplicationController
     def check_permissions
       location = Location.find(params[:id])
 
-      if !current_user.locations.include?(location)
+      if !current_user.admin? && !current_user.buildings.map(&:locations).uniq.include?(location)
         redirect_to locations_path
       end
     end
