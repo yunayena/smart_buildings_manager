@@ -44,7 +44,6 @@ class BuildingsController < ApplicationController
   # PATCH/PUT /buildings/1.json
   def update
     respond_to do |format|
-      Rails.logger.info "___ #{building_params}"
       if @building.update(building_params)
         format.html { redirect_to @building, notice: t('.notice5') }
         format.json { render :show, status: :ok, location: @building }
@@ -73,6 +72,12 @@ class BuildingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def building_params
+      # Comprobamos que params[:user_ids] contenga el identificador del current_user.
+      # De no contenerlo, se lo añadimos por defecto para asociar el building a su current_user
+      if !params[:building][:user_ids].include?(current_user.id)
+        params[:building][:user_ids] << current_user.id
+      end
+
       params.require(:building).permit(:name, :description, :address, :postal_code, :phone, user_ids: [])
     end
 
