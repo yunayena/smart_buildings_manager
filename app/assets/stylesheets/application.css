@@ -15,7 +15,3 @@
  *= require dataTables/jquery.dataTables
  *= require_self
  */
-
-#topnav .toolbar .dropdown-menu.userinfo {
-  float: left;
-}
