@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
       @sensor_count = current_user.sensors.count
     end
   end
+
+  # Ensure locale persists
+  def default_url_options(options={})
+    {:locale => I18n.locale}
+  end
 end
