@@ -6,7 +6,7 @@ es:
       change_locale_es: 'Español'
       language: 'Idioma'
       sus_edificios: "Sus edificios"
-      sus_localizaciones: "Sus edificios"
+      sus_localizaciones: "Sus localizaciones"
       sus_sensores: "Sus sensores"
       sus_controladores: "Sus controladores"
   layouts:
