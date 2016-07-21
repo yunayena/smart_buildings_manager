@@ -18,6 +18,7 @@ es:
       destroy: 'Eliminar'
       are_you_sure: '¿Está usted seguro?'
       new_sensor: 'Nuevo sensor'
+      actions: "Acciones"
     new:
       new_sensor: 'Nuevo sensor'
       back: 'Atrás'

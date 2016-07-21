@@ -18,6 +18,7 @@ en:
       destroy: 'Destroy'
       are_you_sure: 'Are you sure?'
       new_sensor: 'New sensor'
+      actions: "Actions"
     new:
       new_sensor: 'New sensor'
       back: 'Back'
