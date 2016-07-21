@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_persist_locale
 
   def set_locale
-    I18n.locale = params[:locale].to_sym || I18n.default_locale
+    I18n.locale = params[:locale] || I18n.default_locale
 
     redirect_to root_path
   end
@@ -26,6 +26,6 @@ class ApplicationController < ActionController::Base
   end
 
   protected def set_persist_locale
-    I18n.locale = params[:locale].to_sym || I18n.locale
+    I18n.locale = params[:locale] || I18n.locale
   end
 end
